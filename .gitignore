@@ -1,9 +1,10 @@
 .htaccess
+.sass-cache/*
 wp-*.php
 xmlrpc.php
 wp-admin/
 wp-includes/
-wp-content/uploads/
+wordpress/wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/*
 wp-content/backup-db/*

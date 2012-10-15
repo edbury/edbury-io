@@ -1,0 +1,37 @@
+/*
+Theme Name: hüftgold
+Theme URI: http://underscores.me/
+Author: Edbury Enegren
+Author URI: http://dver.gr
+Description: Love handles. Based on _s (among other things).
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+Popping this up top incase Bootstrap/Foundation need to override anything.
+
+*/
+
+html, body {
+	height: 100%;
+}
+
+
+// Import the Frameworks
+@import "foundation";
+@import "app";
