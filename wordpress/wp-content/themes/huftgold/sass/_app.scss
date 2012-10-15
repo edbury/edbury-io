@@ -1,5 +1,20 @@
 @import 'foundation/settings';
 
+.sidebar {
+	margin-top: 25%;
+	position: fixed;
+	.brand {
+		color: $headerFontColor;
+		.io {
+			color: #9A9994;
+		}
+	}
+}
+
+.entry-title a {
+	color: $headerFontColor;
+}
+
 /*-----------------------------------------
 Vatican Cameos
 -----------------------------------------*/

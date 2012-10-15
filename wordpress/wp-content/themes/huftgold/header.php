@@ -22,11 +22,19 @@
 <body <?php body_class(); ?>>
 	<div class="row">
 		<div class="four columns">
-			<header class="navbar" role="banner">
-			    <div class="navbar-inner">
-		    		<a class="brand" href="<?php echo home_url( '/' ); ?>"title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			    </div>
-		    </header>
+			<div class="row">
+				<div class="ten columns end">
+					<div class="sidebar">
+						<header class="navbar" role="banner">
+						    <div class="navbar-inner">
+					    		<a class="brand" href="<?php echo home_url( '/' ); ?>"title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					    			edbury <span class="io">i/o</span>
+					    		</a>
+						    </div>
+					    </header>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="eight columns">
