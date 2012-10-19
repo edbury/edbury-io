@@ -28,34 +28,29 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'huftgold' ) );
-				if ( $categories_list && huftgold_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'huftgold' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
+		<div class="entry-footer-meta">
+			<div class="row taxonomies">
+				<div class="six columns">
+					<div class="entry-meta-cats">
+						<?php if ( get_post_format() ) 
+							echo get_post_format_link( get_post_format() );
+						?>
+					</div>
+				</div>
+				<div class="six columns text-right">
+					<div class="entry-meta-tags">
+						<?php the_tags('', ' '); ?>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns text-right">
+					<a href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo wp_get_shortlink(); ?></a>
+				</div>
+			</div>
+		</div>
 
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'huftgold' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="sep"> | </span>
-			<span class="tag-links">
-				<?php printf( __( 'Tagged %1$s', 'huftgold' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="sep"> | </span>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'huftgold' ), __( '1 Comment', 'huftgold' ), __( '% Comments', 'huftgold' ) ); ?></span>
-		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', 'huftgold' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'huftgold' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

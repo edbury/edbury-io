@@ -17,8 +17,6 @@
 						<div class="site-info">
 							<?php do_action( 'huftgold_credits' ); ?>
 							<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'huftgold' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'huftgold' ), 'WordPress' ); ?></a>
-							<span class="sep"> | </span>
-							<?php printf( __( 'Theme: %1$s by %2$s.', 'huftgold' ), 'huftgold', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
 						</div><!-- .site-info -->
 					</div>
 				</div>

@@ -6,7 +6,7 @@
 	.brand {
 		color: $headerFontColor;
 		.io {
-			color: #9A9994;
+			color: $io;
 		}
 	}
 }
@@ -181,7 +181,51 @@ p .size-full {
 	margin: 0 0 1.5em;
 }
 .post {
-	padding: 25% 0;
+	padding: 22% 0;
+}
+
+/* =Posts
+----------------------------------------------- */
+
+.entry-footer-meta {
+	text-transform: lowercase;
+	color: $io;
+	div, div a {
+		@include modular('font-size', ms(0), 0, .85);
+	}
+	div a {
+		@include transition(linear);
+		@include transition-property(opacity);
+		@include transition-duration(.25s);
+		opacity: .75;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.taxonomies {
+		@include modular('margin-bottom', ms(0));
+	}
+	a {
+		@include modular('font-size', ms(0), 0, .9);
+		color: $io;
+	}
+	.entry-meta-cats a {
+		&:before {
+			content: '/';
+		}
+		&:after {
+			content: '/';
+		}
+	}
+	.entry-meta-tags a {
+		@include modular('margin-right', ms(0));
+		&:last-child {
+			margin-right: 0;
+		}
+		&:before {
+			content: '#';
+		}
+	}
 }
 
 /* =Asides
@@ -441,3 +485,29 @@ pre[data-line] {
 	top: auto;
 	bottom: .4em;
 }
+
+/*-----------------------------------------
+Responsive Adjustments
+-----------------------------------------*/
+
+@media only screen and (max-width: 400px) { 
+	html {
+		font-size: 45%;
+	}
+}
+
+@media only screen and (max-width: $screenSmall - 1) {
+	.sidebar {
+		margin: ($columnGutter/2) 0;
+		position: static;
+	} 
+}
+	/* @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) { 
+		@content; 
+	}
+	@media only screen and (min-width: $screenXlarge) { 
+		@content; 
+	} */
+
+
+

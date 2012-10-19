@@ -69,7 +69,7 @@ function huftgold_setup() {
 	/**
 	 * Add support for the Aside Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', ) );
+	add_theme_support( 'post-formats', array( 'aside','link','image','quote','status','video','audio','chat' ) );
 }
 endif; // huftgold_setup
 add_action( 'after_setup_theme', 'huftgold_setup' );
@@ -215,3 +215,9 @@ add_action('wp_head', 'wpfme_IEhtml5_shim');
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Hum Parameters
+ */
+
+add_filter('hum_shortlink_base', create_function('', 'return "http://ere.io/";'));

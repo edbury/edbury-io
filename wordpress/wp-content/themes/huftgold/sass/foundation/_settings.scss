@@ -3,7 +3,7 @@
 // Grid Settings
 
 $rowWidth: 1140px !default;
-$columnGutter: 30px !default;
+$columnGutter: 32px !default;
 $totalColumns: 12 !default;
 $mobileTotalColumns: 4 !default;
 
@@ -33,6 +33,8 @@ $black: #000 !default;
 $white: #FCFCFA !default;
 $shinyEdge: rgba(#fff, .5) !default;
 $darkEdge: rgba(#000, .2) !default;
+
+$io: #9A9994 !default;
 
 // Font Settings
 
@@ -83,8 +85,8 @@ $complementaryWidth: 20% !default;
 // Modular Scale Settings
 
 // $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
-$baseFontSize: 16 !default;
-$importantModNum: 44 !default;
+$baseFontSize: 20 !default;
+$importantModNum: 40 !default;
 $base-size: $baseFontSize $importantModNum;
 // Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
 // http://www.modularscale.com by Tim Brown
