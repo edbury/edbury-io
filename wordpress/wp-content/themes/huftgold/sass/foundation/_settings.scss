@@ -1,5 +1,7 @@
 // Settings file containing Foundation defaults
 
+@import "common/ratios";
+
 // Grid Settings
 
 $rowWidth: 1140px !default;
@@ -84,7 +86,7 @@ $complementaryWidth: 20% !default;
 
 // Modular Scale Settings
 
-// $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
+$ratio: $fifth; // THIS IS DEFAULT IN MODULAR-SCALE
 $baseFontSize: 20 !default;
 $importantModNum: 40 !default;
 $base-size: $baseFontSize $importantModNum;

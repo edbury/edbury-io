@@ -183,6 +183,12 @@ p .size-full {
 .post {
 	padding: 22% 0;
 }
+.site-footer {
+	@include modular('font-size', ms(0), 0, .75);
+	a {
+		color: $io;
+	}
+}
 
 /* =Posts
 ----------------------------------------------- */
@@ -190,10 +196,9 @@ p .size-full {
 .entry-footer-meta {
 	text-transform: lowercase;
 	color: $io;
-	div, div a {
-		@include modular('font-size', ms(0), 0, .85);
-	}
-	div a {
+	@include modular('font-size', ms(0), 0, .85);
+	a {
+		color: $io;
 		@include transition(linear);
 		@include transition-property(opacity);
 		@include transition-duration(.25s);
@@ -204,10 +209,6 @@ p .size-full {
 	}
 	.taxonomies {
 		@include modular('margin-bottom', ms(0));
-	}
-	a {
-		@include modular('font-size', ms(0), 0, .9);
-		color: $io;
 	}
 	.entry-meta-cats a {
 		&:before {
@@ -493,6 +494,12 @@ Responsive Adjustments
 @media only screen and (max-width: 400px) { 
 	html {
 		font-size: 45%;
+	}
+	.post:first-child {
+		padding: 0 0 22% 0;
+	}
+	.brand {
+		@include modular('font-size', ms(1));
 	}
 }
 
