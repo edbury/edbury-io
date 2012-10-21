@@ -11,32 +11,6 @@
 	}
 }
 
-.entry-title a {
-	color: $headerFontColor;
-}
-
-/*-----------------------------------------
-Vatican Cameos
------------------------------------------*/
-
-.orbit-ready { 
-	background: image-url("foundation/orbit/loading.gif") no-repeat center center #f4f4f4; 
-	height: 280px; 
-	width: 100%;
-	float: left;
-	img {
-		display: none;
-	}
-	&.orbit {
-		float: none;
-		background: none;
-	}
-	&.orbit img {
-		display: block;
-	}
-}
-
-
 /*-----------------------------------------
 Typography
 -----------------------------------------*/
@@ -110,6 +84,11 @@ blockquote ~ figcaption {
 	}
 }
 
+sup, sub {
+	@include modular('font-size', ms(0), 0, .75);
+	color: $io;
+}
+
 /*-----------------------------------------
 Wordpress Classes from _s / WPFill.me
 -----------------------------------------*/
@@ -175,6 +154,9 @@ p .size-full {
 .hentry {
 	margin: 0 0 1.5em;
 }
+.entry-title a {
+	color: $headerFontColor;
+}
 .entry-meta {
 	clear: both;
 }
@@ -205,6 +187,25 @@ p .size-full {
 
 /* =Posts
 ----------------------------------------------- */
+
+.footnote {
+	list-style-type: none;
+	@include modular('font-size', ms(0), 0, .8);
+	@include modular('padding', ms(0), 0, .5);
+	a:first-child {
+		color: $io;
+		border-bottom: 0;
+	}
+	&:target {
+		border-radius: 5px;
+		background-color: #FEFEFD;
+		border: 1px solid $secondaryColor;
+	}
+	a {
+		color: $txtColor;
+		border-bottom: 1px dotted $io;
+	}
+}
 
 .entry-footer-meta {
 	text-transform: lowercase;
