@@ -96,6 +96,19 @@ pre {
   overflow-y: scroll;
 }
 
+figcaption {
+	@include modular('font-size', ms(0), 0, .8);
+	color: $io;
+	text-align: center;
+	font-style: italic;
+	@include modular('padding-bottom', ms(0));	
+}
+
+blockquote ~ figcaption {
+	&:before {
+		content: '-';
+	}
+}
 
 /*-----------------------------------------
 Wordpress Classes from _s / WPFill.me
@@ -515,6 +528,4 @@ Responsive Adjustments
 	@media only screen and (min-width: $screenXlarge) { 
 		@content; 
 	} */
-
-
 
