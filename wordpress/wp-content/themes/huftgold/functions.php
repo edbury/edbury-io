@@ -221,3 +221,9 @@ add_action('wp_head', 'wpfme_IEhtml5_shim');
  */
 
 add_filter('hum_shortlink_base', create_function('', 'return "http://ere.io/";'));
+
+/**
+ * POSSE 
+ */
+
+require( get_template_directory() . '/inc/posse/twitter.php' );

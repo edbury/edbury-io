@@ -2747,27 +2747,25 @@ pre[data-line] {
 /*-----------------------------------------
 Responsive Adjustments
 -----------------------------------------*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 433px) {
   /* line 509, sass/_app.scss */
   html {
     font-size: 45%; }
 
   /* line 512, sass/_app.scss */
-  .post:first-child {
-    padding: 0 0 22% 0; }
-
-  /* line 515, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
+@media only screen and (max-width: 521px) and (min-width: 434px) {
+  /* line 518, sass/_app.scss */
+  html {
+    font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 521, sass/_app.scss */
+  /* line 524, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
-    position: static; } }
-/* @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) { 
-	@content; 
-}
-@media only screen and (min-width: $screenXlarge) { 
-	@content; 
-} */
+    position: static; }
+
+  /* line 528, sass/_app.scss */
+  .post:first-child {
+    padding: 11% 0 22% 0; } }

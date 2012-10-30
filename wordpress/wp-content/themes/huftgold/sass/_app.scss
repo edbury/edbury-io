@@ -505,15 +505,18 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 
-@media only screen and (max-width: 400px) { 
+@media only screen and (max-width: 433px) { 
 	html {
 		font-size: 45%;
 	}
-	.post:first-child {
-		padding: 0 0 22% 0;
-	}
 	.brand {
 		@include modular('font-size', ms(1));
+	}
+}
+
+@media only screen and (max-width: 521px) and (min-width: 434px) { 
+	html {
+		font-size: 50%;
 	}
 }
 
@@ -522,11 +525,8 @@ Responsive Adjustments
 		margin: ($columnGutter/2) 0;
 		position: static;
 	} 
-}
-	/* @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) { 
-		@content; 
+	.post:first-child {
+		padding: 11% 0 22% 0;
 	}
-	@media only screen and (min-width: $screenXlarge) { 
-		@content; 
-	} */
+}
 
