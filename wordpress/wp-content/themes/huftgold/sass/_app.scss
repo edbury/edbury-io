@@ -56,7 +56,7 @@ pre {
 
   // Account for some code outputs that place code tags in pre tags
   code {
-  	@include modular('font-size', ms(0), 0, .8);
+  	@include modular('font-size', ms(0), 0, .7);
     padding: 0;
     color: inherit;
     background-color: transparent;

@@ -15,7 +15,7 @@
  * 3) From the application details page copy the access token and access token
  *      secret into the place in this code marked with (A_USER_TOKEN
  *      and A_USER_SECRET)
- * 4) Visit this page using your web browser.
+ * 4) Include a reference to this in your functions.php file
  *
  * @author themattharris
  */
@@ -23,30 +23,32 @@
 
 function posse_twitter( $post_ID ) {
 	global $post;
-	// check post type if necessary
-    if ( get_post_format( $post->ID ) != 'status' ) return;
+	// check post format if necessary
+	if ( get_post_format( $post->ID ) != 'status' ) return;
 
-    $post_id = $post->ID;
-    $shortlink = wp_get_shortlink();
-    $tweet_content = $post->post_content.' '.$shortlink;
+	$post_id = $post->ID;
+	$shortlink = wp_get_shortlink();
+	$tweet_content = $post->post_content.' '.$shortlink;
 
-    if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
-        // ...run code once
+	// ...run code once
+	if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
+
+		// require the relevant libraries
 		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
 		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhUtilities.php';
 		$tmhOAuth = new tmhOAuth(array(
-		  'consumer_key'    => 'SdRONQAbY4LeKAvsrK3A',
-		  'consumer_secret' => 'S1G6nDBMIYEFkfZVO9A2nVqLPCJO8coXJgJ6MzZ2xXM',
-		  'user_token'      => '771746-sG8SHcbAW8UPFvZkAn6s424WRV19CVMHw46WB02I',
-		  'user_secret'     => 'Gqiu2hnbyj4MkA7qD4ffeiKTODak8V0pp7fqvNEvp0',
+			'consumer_key'    => 'SdRONQAbY4LeKAvsrK3A',
+			'consumer_secret' => 'S1G6nDBMIYEFkfZVO9A2nVqLPCJO8coXJgJ6MzZ2xXM',
+			'user_token'      => '771746-sG8SHcbAW8UPFvZkAn6s424WRV19CVMHw46WB02I',
+			'user_secret'     => 'Gqiu2hnbyj4MkA7qD4ffeiKTODak8V0pp7fqvNEvp0',
 		));
 
 		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
-		  'status' => $tweet_content
+		'status' => $tweet_content
 		));
 
 		update_post_meta( $post_id, 'tweeted', true );
-    }
+	}
 }
 
 add_action( 'publish_post', 'posse_twitter' );
