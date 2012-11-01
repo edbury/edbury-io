@@ -32,8 +32,8 @@ function posse_twitter( $post_ID ) {
 
     if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
         // ...run code once
-		require 'libraries/tmhOAuth/tmhOAuth.php';
-		require 'libraries/tmhOAuth/tmhUtilities.php';
+		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
+		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhUtilities.php';
 		$tmhOAuth = new tmhOAuth(array(
 		  'consumer_key'    => 'SdRONQAbY4LeKAvsrK3A',
 		  'consumer_secret' => 'S1G6nDBMIYEFkfZVO9A2nVqLPCJO8coXJgJ6MzZ2xXM',
@@ -49,4 +49,4 @@ function posse_twitter( $post_ID ) {
     }
 }
 
-	add_action( 'publish_post', 'posse_twitter' );
+add_action( 'publish_post', 'posse_twitter' );

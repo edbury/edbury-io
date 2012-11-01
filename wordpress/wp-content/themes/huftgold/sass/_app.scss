@@ -257,9 +257,14 @@ p .size-full {
 .format-status {
 	padding: 11% 0;
 	.entry-content {
-		@include modular('font-size', ms(0), 0, .9);
-		color: $io;
-		//font-style: italic;
+		p {
+			@include modular('font-size', ms(0), 0, .85);
+			color: $io;
+			//font-style: italic;
+		}
+	}
+	.entry-footer-meta {
+		@include modular('font-size', ms(0), 0, .8);
 	}
 }
 
