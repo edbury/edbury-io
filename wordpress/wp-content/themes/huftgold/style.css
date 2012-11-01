@@ -2494,9 +2494,20 @@ p .size-full {
 .archive .format-aside .entry-title {
   display: none; }
 
+/* =Asides
+----------------------------------------------- */
+/* line 257, sass/_app.scss */
+.format-status {
+  padding: 11% 0; }
+  /* line 259, sass/_app.scss */
+  .format-status .entry-content {
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #9a9994; }
+
 /* =Media
 ----------------------------------------------- */
-/* line 261, sass/_app.scss */
+/* line 272, sass/_app.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2504,7 +2515,7 @@ p .size-full {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */ }
 
-/* line 267, sass/_app.scss */
+/* line 278, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2512,7 +2523,7 @@ img[class*="wp-image-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-/* line 272, sass/_app.scss */
+/* line 283, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2520,7 +2531,7 @@ img.size-full {
   width: auto;
   /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
 
-/* line 277, sass/_app.scss */
+/* line 288, sass/_app.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2528,47 +2539,47 @@ img.size-full {
   margin-top: 0;
   padding: 0; }
 
-/* line 283, sass/_app.scss */
+/* line 294, sass/_app.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%; }
 
-/* line 289, sass/_app.scss */
+/* line 300, sass/_app.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em; }
 
-/* line 292, sass/_app.scss */
+/* line 303, sass/_app.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 297, sass/_app.scss */
+/* line 308, sass/_app.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 300, sass/_app.scss */
+/* line 311, sass/_app.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 303, sass/_app.scss */
+/* line 314, sass/_app.scss */
 #content .gallery {
   margin-bottom: 1.5em; }
 
-/* line 308, sass/_app.scss */
+/* line 319, sass/_app.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 313, sass/_app.scss */
+/* line 324, sass/_app.scss */
 #content .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 324, sass/_app.scss */
+/* line 335, sass/_app.scss */
 embed,
 iframe,
 object {
@@ -2576,17 +2587,17 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 332, sass/_app.scss */
+/* line 343, sass/_app.scss */
 #content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 336, sass/_app.scss */
+/* line 347, sass/_app.scss */
 #content .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 340, sass/_app.scss */
+/* line 351, sass/_app.scss */
 #content .nav-next {
   float: right;
   text-align: right;
@@ -2594,12 +2605,12 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 349, sass/_app.scss */
+/* line 360, sass/_app.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Search widget */
-/* line 354, sass/_app.scss */
+/* line 365, sass/_app.scss */
 #searchsubmit {
   display: none; }
 
@@ -2608,7 +2619,7 @@ object {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 365, sass/_app.scss */
+/* line 376, sass/_app.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -2626,51 +2637,51 @@ pre[class*="language-"] {
   hyphens: none; }
 
 /* Code blocks */
-/* line 384, sass/_app.scss */
+/* line 395, sass/_app.scss */
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto; }
 
-/* line 390, sass/_app.scss */
+/* line 401, sass/_app.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0; }
 
 /* Inline code */
-/* line 395, sass/_app.scss */
+/* line 406, sass/_app.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em; }
 
-/* line 403, sass/_app.scss */
+/* line 414, sass/_app.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: slategray; }
 
-/* line 407, sass/_app.scss */
+/* line 418, sass/_app.scss */
 .token.punctuation {
   color: #999; }
 
-/* line 411, sass/_app.scss */
+/* line 422, sass/_app.scss */
 .namespace {
   opacity: .7; }
 
-/* line 418, sass/_app.scss */
+/* line 429, sass/_app.scss */
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number {
   color: #905; }
 
-/* line 424, sass/_app.scss */
+/* line 435, sass/_app.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #690; }
 
-/* line 432, sass/_app.scss */
+/* line 443, sass/_app.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -2679,31 +2690,31 @@ pre[class*="language-"] {
   color: #a67f59;
   background: rgba(255, 255, 255, 0.5); }
 
-/* line 439, sass/_app.scss */
+/* line 450, sass/_app.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a; }
 
-/* line 445, sass/_app.scss */
+/* line 456, sass/_app.scss */
 .token.regex,
 .token.important {
   color: #e90; }
 
-/* line 449, sass/_app.scss */
+/* line 460, sass/_app.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 453, sass/_app.scss */
+/* line 464, sass/_app.scss */
 .token.entity {
   cursor: help; }
 
-/* line 456, sass/_app.scss */
+/* line 467, sass/_app.scss */
 pre[data-line] {
   position: relative;
   padding: 1em 0 1em 3em; }
 
-/* line 461, sass/_app.scss */
+/* line 472, sass/_app.scss */
 .line-highlight {
   position: absolute;
   left: 0;
@@ -2720,7 +2731,7 @@ pre[data-line] {
   line-height: inherit;
   white-space: pre; }
 
-/* line 481, sass/_app.scss */
+/* line 492, sass/_app.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   content: attr(data-start);
@@ -2738,7 +2749,7 @@ pre[data-line] {
   text-shadow: none;
   box-shadow: 0 1px white; }
 
-/* line 498, sass/_app.scss */
+/* line 509, sass/_app.scss */
 .line-highlight[data-end]:after {
   content: attr(data-end);
   top: auto;
@@ -2748,24 +2759,24 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 @media only screen and (max-width: 433px) {
-  /* line 509, sass/_app.scss */
+  /* line 520, sass/_app.scss */
   html {
     font-size: 45%; }
 
-  /* line 512, sass/_app.scss */
+  /* line 523, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
 @media only screen and (max-width: 521px) and (min-width: 434px) {
-  /* line 518, sass/_app.scss */
+  /* line 529, sass/_app.scss */
   html {
     font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 524, sass/_app.scss */
+  /* line 535, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
     position: static; }
 
-  /* line 528, sass/_app.scss */
+  /* line 539, sass/_app.scss */
   .post:first-child {
     padding: 11% 0 22% 0; } }

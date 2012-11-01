@@ -33,7 +33,7 @@
 				<div class="six columns">
 					<div class="entry-meta-cats">
 						<?php if ( get_post_format() ) 
-							echo get_post_format_link( get_post_format() );
+							//echo get_post_format_link( get_post_format() );
 						?>
 					</div>
 				</div>

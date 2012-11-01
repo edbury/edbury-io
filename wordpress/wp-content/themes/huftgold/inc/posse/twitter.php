@@ -27,7 +27,8 @@ function posse_twitter( $post_ID ) {
     if ( get_post_format( $post->ID ) != 'status' ) return;
 
     $post_id = $post->ID;
-    $tweet_content = $post->post_content;
+    $shortlink = wp_get_shortlink();
+    $tweet_content = $post->post_content.' '.$shortlink;
 
     if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
         // ...run code once
@@ -48,4 +49,4 @@ function posse_twitter( $post_ID ) {
     }
 }
 
-add_action( 'publish_post', 'posse_twitter' );
+	add_action( 'publish_post', 'posse_twitter' );
