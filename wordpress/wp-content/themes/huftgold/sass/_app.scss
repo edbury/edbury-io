@@ -256,6 +256,9 @@ p .size-full {
 
 .format-status {
 	padding: 11% 0;
+	&:first-child {
+		padding: 22% 0 11% 0;
+	}
 	.entry-content {
 		p {
 			@include modular('font-size', ms(0), 0, .85);

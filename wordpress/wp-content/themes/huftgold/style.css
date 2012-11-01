@@ -2499,19 +2499,22 @@ p .size-full {
 /* line 257, sass/_app.scss */
 .format-status {
   padding: 11% 0; }
-  /* line 260, sass/_app.scss */
+  /* line 259, sass/_app.scss */
+  .format-status:first-child {
+    padding: 22% 0 11% 0; }
+  /* line 263, sass/_app.scss */
   .format-status .entry-content p {
     font-size: 17px;
     font-size: 1.7rem;
     color: #9a9994; }
-  /* line 266, sass/_app.scss */
+  /* line 269, sass/_app.scss */
   .format-status .entry-footer-meta {
     font-size: 16px;
     font-size: 1.6rem; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 277, sass/_app.scss */
+/* line 280, sass/_app.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2519,7 +2522,7 @@ p .size-full {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */ }
 
-/* line 283, sass/_app.scss */
+/* line 286, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2527,7 +2530,7 @@ img[class*="wp-image-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-/* line 288, sass/_app.scss */
+/* line 291, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2535,7 +2538,7 @@ img.size-full {
   width: auto;
   /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
 
-/* line 293, sass/_app.scss */
+/* line 296, sass/_app.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2543,47 +2546,47 @@ img.size-full {
   margin-top: 0;
   padding: 0; }
 
-/* line 299, sass/_app.scss */
+/* line 302, sass/_app.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%; }
 
-/* line 305, sass/_app.scss */
+/* line 308, sass/_app.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em; }
 
-/* line 308, sass/_app.scss */
+/* line 311, sass/_app.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 313, sass/_app.scss */
+/* line 316, sass/_app.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 316, sass/_app.scss */
+/* line 319, sass/_app.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 319, sass/_app.scss */
+/* line 322, sass/_app.scss */
 #content .gallery {
   margin-bottom: 1.5em; }
 
-/* line 324, sass/_app.scss */
+/* line 327, sass/_app.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 329, sass/_app.scss */
+/* line 332, sass/_app.scss */
 #content .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 340, sass/_app.scss */
+/* line 343, sass/_app.scss */
 embed,
 iframe,
 object {
@@ -2591,17 +2594,17 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 348, sass/_app.scss */
+/* line 351, sass/_app.scss */
 #content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 352, sass/_app.scss */
+/* line 355, sass/_app.scss */
 #content .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 356, sass/_app.scss */
+/* line 359, sass/_app.scss */
 #content .nav-next {
   float: right;
   text-align: right;
@@ -2609,12 +2612,12 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 365, sass/_app.scss */
+/* line 368, sass/_app.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Search widget */
-/* line 370, sass/_app.scss */
+/* line 373, sass/_app.scss */
 #searchsubmit {
   display: none; }
 
@@ -2623,7 +2626,7 @@ object {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 381, sass/_app.scss */
+/* line 384, sass/_app.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -2641,51 +2644,51 @@ pre[class*="language-"] {
   hyphens: none; }
 
 /* Code blocks */
-/* line 400, sass/_app.scss */
+/* line 403, sass/_app.scss */
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto; }
 
-/* line 406, sass/_app.scss */
+/* line 409, sass/_app.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0; }
 
 /* Inline code */
-/* line 411, sass/_app.scss */
+/* line 414, sass/_app.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em; }
 
-/* line 419, sass/_app.scss */
+/* line 422, sass/_app.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: slategray; }
 
-/* line 423, sass/_app.scss */
+/* line 426, sass/_app.scss */
 .token.punctuation {
   color: #999; }
 
-/* line 427, sass/_app.scss */
+/* line 430, sass/_app.scss */
 .namespace {
   opacity: .7; }
 
-/* line 434, sass/_app.scss */
+/* line 437, sass/_app.scss */
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number {
   color: #905; }
 
-/* line 440, sass/_app.scss */
+/* line 443, sass/_app.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #690; }
 
-/* line 448, sass/_app.scss */
+/* line 451, sass/_app.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -2694,31 +2697,31 @@ pre[class*="language-"] {
   color: #a67f59;
   background: rgba(255, 255, 255, 0.5); }
 
-/* line 455, sass/_app.scss */
+/* line 458, sass/_app.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a; }
 
-/* line 461, sass/_app.scss */
+/* line 464, sass/_app.scss */
 .token.regex,
 .token.important {
   color: #e90; }
 
-/* line 465, sass/_app.scss */
+/* line 468, sass/_app.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 469, sass/_app.scss */
+/* line 472, sass/_app.scss */
 .token.entity {
   cursor: help; }
 
-/* line 472, sass/_app.scss */
+/* line 475, sass/_app.scss */
 pre[data-line] {
   position: relative;
   padding: 1em 0 1em 3em; }
 
-/* line 477, sass/_app.scss */
+/* line 480, sass/_app.scss */
 .line-highlight {
   position: absolute;
   left: 0;
@@ -2735,7 +2738,7 @@ pre[data-line] {
   line-height: inherit;
   white-space: pre; }
 
-/* line 497, sass/_app.scss */
+/* line 500, sass/_app.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   content: attr(data-start);
@@ -2753,7 +2756,7 @@ pre[data-line] {
   text-shadow: none;
   box-shadow: 0 1px white; }
 
-/* line 514, sass/_app.scss */
+/* line 517, sass/_app.scss */
 .line-highlight[data-end]:after {
   content: attr(data-end);
   top: auto;
@@ -2763,24 +2766,24 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 @media only screen and (max-width: 433px) {
-  /* line 525, sass/_app.scss */
+  /* line 528, sass/_app.scss */
   html {
     font-size: 45%; }
 
-  /* line 528, sass/_app.scss */
+  /* line 531, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
 @media only screen and (max-width: 521px) and (min-width: 434px) {
-  /* line 534, sass/_app.scss */
+  /* line 537, sass/_app.scss */
   html {
     font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 540, sass/_app.scss */
+  /* line 543, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
     position: static; }
 
-  /* line 544, sass/_app.scss */
+  /* line 547, sass/_app.scss */
   .post:first-child {
     padding: 11% 0 22% 0; } }
