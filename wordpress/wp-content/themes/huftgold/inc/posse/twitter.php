@@ -51,6 +51,8 @@ function posse_twitter( $post_ID ) {
 		'status' => $tweet_content
 		));
 
+		error_log($code);
+
 		error_log('posse_twitter() made it past tmhOAuth, should be on Twitter now');
 
 		update_post_meta( $post_id, 'tweeted', true );
