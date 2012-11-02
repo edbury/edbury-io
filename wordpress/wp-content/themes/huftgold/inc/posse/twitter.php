@@ -57,6 +57,6 @@ function posse_twitter( $post_ID ) {
 	}
 }
 
-add_action( 'publish_post', 'posse_twitter' );
 add_action( 'xmlrpc_publish_post', 'posse_twitter' ); 
 add_action( 'app_publish_post', 'posse_twitter' );
+add_action( 'publish_post', 'posse_twitter' );
