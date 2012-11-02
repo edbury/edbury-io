@@ -22,9 +22,11 @@
 
 
 function posse_twitter( $post_ID ) {
+	error_log('Executing posse_twitter()');
 	global $post;
 	// check post format if necessary
 	if ( get_post_format( $post->ID ) != 'status' ) return;
+	error_log('posse_twitter() made it past format check');
 
 	$post_id = $post->ID;
 	$shortlink = wp_get_shortlink();
@@ -32,6 +34,8 @@ function posse_twitter( $post_ID ) {
 
 	// ...run code once
 	if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
+
+		error_log('posse_twitter() not tweeted before');
 
 		// require the relevant libraries
 		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
@@ -46,6 +50,8 @@ function posse_twitter( $post_ID ) {
 		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
 		'status' => $tweet_content
 		));
+
+		error_log('posse_twitter() made it past tmhOAuth, should be on Twitter now');
 
 		update_post_meta( $post_id, 'tweeted', true );
 	}
