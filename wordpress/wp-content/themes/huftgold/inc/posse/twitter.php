@@ -23,7 +23,7 @@
 
 function posse_twitter( $post_ID ) {
 	error_log('Executing posse_twitter()');
-	global $post;
+	$post = get_post( $post_ID );
 	// check post format if necessary
 	if ( get_post_format( $post->ID ) != 'status' ) return;
 	error_log('posse_twitter() made it past format check');
