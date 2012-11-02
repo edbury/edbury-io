@@ -2231,7 +2231,12 @@ Typography
 * {
   word-wrap: break-word; }
 
-/* line 25, sass/_app.scss */
+/* line 23, sass/_app.scss */
+a abbr {
+  color: #2ba6cb;
+  border-bottom: 1px solid #ddd; }
+
+/* line 31, sass/_app.scss */
 code,
 pre {
   padding: 0 3px 2px;
@@ -2244,7 +2249,7 @@ pre {
   -o-border-radius: 3px;
   border-radius: 3px; }
 
-/* line 33, sass/_app.scss */
+/* line 39, sass/_app.scss */
 code {
   padding: 0 4px;
   font-size: 16px;
@@ -2253,7 +2258,7 @@ code {
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8; }
 
-/* line 42, sass/_app.scss */
+/* line 48, sass/_app.scss */
 pre {
   display: block;
   padding: 20px;
@@ -2275,7 +2280,7 @@ pre {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-  /* line 58, sass/_app.scss */
+  /* line 64, sass/_app.scss */
   pre code {
     font-size: 14px;
     font-size: 1.4rem;
@@ -2284,12 +2289,12 @@ pre {
     background-color: transparent;
     border: 0; }
 
-/* line 68, sass/_app.scss */
+/* line 74, sass/_app.scss */
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll; }
 
-/* line 73, sass/_app.scss */
+/* line 79, sass/_app.scss */
 figcaption {
   font-size: 16px;
   font-size: 1.6rem;
@@ -2299,11 +2304,11 @@ figcaption {
   padding-bottom: 20px;
   padding-bottom: 2rem; }
 
-/* line 82, sass/_app.scss */
+/* line 88, sass/_app.scss */
 blockquote ~ figcaption:before {
   content: '-'; }
 
-/* line 87, sass/_app.scss */
+/* line 93, sass/_app.scss */
 sup, sub {
   font-size: 15px;
   font-size: 1.5rem;
@@ -2312,62 +2317,62 @@ sup, sub {
 /*-----------------------------------------
 Wordpress Classes from _s / WPFill.me
 -----------------------------------------*/
-/* line 96, sass/_app.scss */
+/* line 102, sass/_app.scss */
 .alignleft {
   float: left;
   margin: 0 15px 30px 0; }
 
-/* line 100, sass/_app.scss */
+/* line 106, sass/_app.scss */
 .aligncenter {
   display: block;
   margin: 0 auto 30px auto; }
 
-/* line 104, sass/_app.scss */
+/* line 110, sass/_app.scss */
 .alignright {
   float: right;
   margin: 0 0 30px 15px; }
 
-/* line 108, sass/_app.scss */
+/* line 114, sass/_app.scss */
 .alignnone {
   float: none;
   display: block;
   margin: 0 0 30px 0; }
 
-/* line 113, sass/_app.scss */
+/* line 119, sass/_app.scss */
 .size-full {
   width: 100%;
   height: auto;
   margin: 0 0 30px 0; }
 
-/* line 118, sass/_app.scss */
+/* line 124, sass/_app.scss */
 p .alignleft {
   float: left;
   margin: 5px 15px 30px 0; }
 
-/* line 122, sass/_app.scss */
+/* line 128, sass/_app.scss */
 p .aligncenter {
   display: block;
   margin: 5px auto 30px auto; }
 
-/* line 126, sass/_app.scss */
+/* line 132, sass/_app.scss */
 p .alignright {
   float: right;
   margin: 5px 0 30px 15px; }
 
-/* line 130, sass/_app.scss */
+/* line 136, sass/_app.scss */
 p .alignnone {
   float: none;
   display: block;
   margin: 5px 0 30px 0; }
 
-/* line 135, sass/_app.scss */
+/* line 141, sass/_app.scss */
 p .size-full {
   width: 100%;
   height: auto;
   margin: 5px 0 30px 0; }
 
 /* Text meant only for screen readers */
-/* line 142, sass/_app.scss */
+/* line 148, sass/_app.scss */
 .assistive-text {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -2376,19 +2381,19 @@ p .size-full {
 
 /* =Content
 ----------------------------------------------- */
-/* line 154, sass/_app.scss */
+/* line 160, sass/_app.scss */
 .hentry {
   margin: 0 0 1.5em; }
 
-/* line 157, sass/_app.scss */
+/* line 163, sass/_app.scss */
 .entry-title a {
   color: #413932; }
 
-/* line 160, sass/_app.scss */
+/* line 166, sass/_app.scss */
 .entry-meta {
   clear: both; }
 
-/* line 163, sass/_app.scss */
+/* line 169, sass/_app.scss */
 .byline {
   display: none; }
 
@@ -2396,58 +2401,58 @@ p .size-full {
 .group-blog .byline {
 	display: inline;
 } */
-/* line 171, sass/_app.scss */
+/* line 177, sass/_app.scss */
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
 
-/* line 174, sass/_app.scss */
+/* line 180, sass/_app.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
 
-/* line 178, sass/_app.scss */
+/* line 184, sass/_app.scss */
 .post {
   padding: 22% 0; }
 
-/* line 181, sass/_app.scss */
+/* line 187, sass/_app.scss */
 .site-footer {
   font-size: 15px;
   font-size: 1.5rem; }
-  /* line 183, sass/_app.scss */
+  /* line 189, sass/_app.scss */
   .site-footer a {
     color: #9a9994; }
 
 /* =Posts
 ----------------------------------------------- */
-/* line 191, sass/_app.scss */
+/* line 197, sass/_app.scss */
 .footnote {
   list-style-type: none;
   font-size: 16px;
   font-size: 1.6rem;
   padding: 10px;
   padding: 1rem; }
-  /* line 195, sass/_app.scss */
+  /* line 201, sass/_app.scss */
   .footnote a:first-child {
     color: #9a9994;
     border-bottom: 0; }
-  /* line 199, sass/_app.scss */
+  /* line 205, sass/_app.scss */
   .footnote:target {
     border-radius: 5px;
     background-color: #FEFEFD;
     border: 1px solid #e9e9e9; }
-  /* line 204, sass/_app.scss */
+  /* line 210, sass/_app.scss */
   .footnote a {
     color: #4e443c;
     border-bottom: 1px dotted #9a9994; }
 
-/* line 210, sass/_app.scss */
+/* line 216, sass/_app.scss */
 .entry-footer-meta {
   text-transform: lowercase;
   color: #9a9994;
   font-size: 17px;
   font-size: 1.7rem; }
-  /* line 214, sass/_app.scss */
+  /* line 220, sass/_app.scss */
   .entry-footer-meta a {
     color: #9a9994;
     -webkit-transition: linear;
@@ -2463,58 +2468,58 @@ p .size-full {
     -o-transition-duration: 0.25s;
     transition-duration: 0.25s;
     opacity: .75; }
-    /* line 220, sass/_app.scss */
+    /* line 226, sass/_app.scss */
     .entry-footer-meta a:hover {
       opacity: 1; }
-  /* line 224, sass/_app.scss */
+  /* line 230, sass/_app.scss */
   .entry-footer-meta .taxonomies {
     margin-bottom: 20px;
     margin-bottom: 2rem; }
-  /* line 228, sass/_app.scss */
+  /* line 234, sass/_app.scss */
   .entry-footer-meta .entry-meta-cats a:before {
     content: '/'; }
-  /* line 231, sass/_app.scss */
+  /* line 237, sass/_app.scss */
   .entry-footer-meta .entry-meta-cats a:after {
     content: '/'; }
-  /* line 235, sass/_app.scss */
+  /* line 241, sass/_app.scss */
   .entry-footer-meta .entry-meta-tags a {
     margin-right: 20px;
     margin-right: 2rem; }
-    /* line 237, sass/_app.scss */
+    /* line 243, sass/_app.scss */
     .entry-footer-meta .entry-meta-tags a:last-child {
       margin-right: 0; }
-    /* line 240, sass/_app.scss */
+    /* line 246, sass/_app.scss */
     .entry-footer-meta .entry-meta-tags a:before {
       content: '#'; }
 
 /* =Asides
 ----------------------------------------------- */
-/* line 250, sass/_app.scss */
+/* line 256, sass/_app.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
 
-/* =Asides
+/* =Statuses
 ----------------------------------------------- */
-/* line 257, sass/_app.scss */
+/* line 263, sass/_app.scss */
 .format-status {
   padding: 11% 0; }
-  /* line 259, sass/_app.scss */
+  /* line 265, sass/_app.scss */
   .format-status:first-child {
     padding: 22% 0 11% 0; }
-  /* line 263, sass/_app.scss */
+  /* line 269, sass/_app.scss */
   .format-status .entry-content p {
     font-size: 17px;
     font-size: 1.7rem;
     color: #9a9994; }
-  /* line 269, sass/_app.scss */
+  /* line 275, sass/_app.scss */
   .format-status .entry-footer-meta {
-    font-size: 16px;
-    font-size: 1.6rem; }
+    font-size: 14px;
+    font-size: 1.4rem; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 280, sass/_app.scss */
+/* line 286, sass/_app.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2522,7 +2527,7 @@ p .size-full {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */ }
 
-/* line 286, sass/_app.scss */
+/* line 292, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2530,7 +2535,7 @@ img[class*="wp-image-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-/* line 291, sass/_app.scss */
+/* line 297, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2538,7 +2543,7 @@ img.size-full {
   width: auto;
   /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
 
-/* line 296, sass/_app.scss */
+/* line 302, sass/_app.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2546,47 +2551,47 @@ img.size-full {
   margin-top: 0;
   padding: 0; }
 
-/* line 302, sass/_app.scss */
+/* line 308, sass/_app.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%; }
 
-/* line 308, sass/_app.scss */
+/* line 314, sass/_app.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em; }
 
-/* line 311, sass/_app.scss */
+/* line 317, sass/_app.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 316, sass/_app.scss */
+/* line 322, sass/_app.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 319, sass/_app.scss */
+/* line 325, sass/_app.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 322, sass/_app.scss */
+/* line 328, sass/_app.scss */
 #content .gallery {
   margin-bottom: 1.5em; }
 
-/* line 327, sass/_app.scss */
+/* line 333, sass/_app.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 332, sass/_app.scss */
+/* line 338, sass/_app.scss */
 #content .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 343, sass/_app.scss */
+/* line 349, sass/_app.scss */
 embed,
 iframe,
 object {
@@ -2594,17 +2599,17 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 351, sass/_app.scss */
+/* line 357, sass/_app.scss */
 #content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 355, sass/_app.scss */
+/* line 361, sass/_app.scss */
 #content .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 359, sass/_app.scss */
+/* line 365, sass/_app.scss */
 #content .nav-next {
   float: right;
   text-align: right;
@@ -2612,12 +2617,12 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 368, sass/_app.scss */
+/* line 374, sass/_app.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Search widget */
-/* line 373, sass/_app.scss */
+/* line 379, sass/_app.scss */
 #searchsubmit {
   display: none; }
 
@@ -2626,7 +2631,7 @@ object {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 384, sass/_app.scss */
+/* line 390, sass/_app.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -2644,51 +2649,51 @@ pre[class*="language-"] {
   hyphens: none; }
 
 /* Code blocks */
-/* line 403, sass/_app.scss */
+/* line 409, sass/_app.scss */
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto; }
 
-/* line 409, sass/_app.scss */
+/* line 415, sass/_app.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0; }
 
 /* Inline code */
-/* line 414, sass/_app.scss */
+/* line 420, sass/_app.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em; }
 
-/* line 422, sass/_app.scss */
+/* line 428, sass/_app.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: slategray; }
 
-/* line 426, sass/_app.scss */
+/* line 432, sass/_app.scss */
 .token.punctuation {
   color: #999; }
 
-/* line 430, sass/_app.scss */
+/* line 436, sass/_app.scss */
 .namespace {
   opacity: .7; }
 
-/* line 437, sass/_app.scss */
+/* line 443, sass/_app.scss */
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number {
   color: #905; }
 
-/* line 443, sass/_app.scss */
+/* line 449, sass/_app.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #690; }
 
-/* line 451, sass/_app.scss */
+/* line 457, sass/_app.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -2697,31 +2702,31 @@ pre[class*="language-"] {
   color: #a67f59;
   background: rgba(255, 255, 255, 0.5); }
 
-/* line 458, sass/_app.scss */
+/* line 464, sass/_app.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a; }
 
-/* line 464, sass/_app.scss */
+/* line 470, sass/_app.scss */
 .token.regex,
 .token.important {
   color: #e90; }
 
-/* line 468, sass/_app.scss */
+/* line 474, sass/_app.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 472, sass/_app.scss */
+/* line 478, sass/_app.scss */
 .token.entity {
   cursor: help; }
 
-/* line 475, sass/_app.scss */
+/* line 481, sass/_app.scss */
 pre[data-line] {
   position: relative;
   padding: 1em 0 1em 3em; }
 
-/* line 480, sass/_app.scss */
+/* line 486, sass/_app.scss */
 .line-highlight {
   position: absolute;
   left: 0;
@@ -2738,7 +2743,7 @@ pre[data-line] {
   line-height: inherit;
   white-space: pre; }
 
-/* line 500, sass/_app.scss */
+/* line 506, sass/_app.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   content: attr(data-start);
@@ -2756,7 +2761,7 @@ pre[data-line] {
   text-shadow: none;
   box-shadow: 0 1px white; }
 
-/* line 517, sass/_app.scss */
+/* line 523, sass/_app.scss */
 .line-highlight[data-end]:after {
   content: attr(data-end);
   top: auto;
@@ -2766,24 +2771,24 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 @media only screen and (max-width: 433px) {
-  /* line 528, sass/_app.scss */
+  /* line 534, sass/_app.scss */
   html {
     font-size: 45%; }
 
-  /* line 531, sass/_app.scss */
+  /* line 537, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
 @media only screen and (max-width: 521px) and (min-width: 434px) {
-  /* line 537, sass/_app.scss */
+  /* line 543, sass/_app.scss */
   html {
     font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 543, sass/_app.scss */
+  /* line 549, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
     position: static; }
 
-  /* line 547, sass/_app.scss */
+  /* line 553, sass/_app.scss */
   .post:first-child {
     padding: 11% 0 22% 0; } }

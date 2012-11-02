@@ -19,6 +19,12 @@ Typography
 	word-wrap: break-word;
 }
 
+a {
+	abbr {
+		color: $mainColor;
+		border-bottom: 1px solid #ddd;
+	}
+}
 
 // Inline and block code styles
 code,
@@ -251,7 +257,7 @@ p .size-full {
 	display: none;
 }
 
-/* =Asides
+/* =Statuses
 ----------------------------------------------- */
 
 .format-status {
@@ -267,7 +273,7 @@ p .size-full {
 		}
 	}
 	.entry-footer-meta {
-		@include modular('font-size', ms(0), 0, .8);
+		@include modular('font-size', ms(0), 0, .7);
 	}
 }
 

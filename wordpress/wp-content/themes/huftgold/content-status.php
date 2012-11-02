@@ -14,12 +14,12 @@
 	<footer class="entry-meta">
 		<div class="entry-footer-meta">
 			<div class="row taxonomies">
-				<div class="six columns">
+				<div class="four columns">
 					<div class="entry-meta-cats">
 						<?php //echo '<a href="'.get_post_format_link( get_post_format() ).'" title="Browse format: '.get_post_format().'">'.get_post_format().'</a>'; ?>
 					</div>
 				</div>
-				<div class="six columns text-right">
+				<div class="eight columns text-right">
 					<div class="entry-meta-tags">
 						<?php the_tags('', ' '); ?>
 					</div>

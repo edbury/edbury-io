@@ -65,14 +65,14 @@
 		<footer class="entry-meta">
 			<div class="entry-footer-meta">
 				<div class="row taxonomies">
-					<div class="six columns">
+					<div class="four columns">
 						<div class="entry-meta-cats">
 							<?php if ( get_post_format() ) 
 								//echo get_post_format_link( get_post_format() );
 							?>
 						</div>
 					</div>
-					<div class="six columns text-right">
+					<div class="eight columns text-right">
 						<div class="entry-meta-tags">
 							<?php the_tags('', ' '); ?>
 						</div>
