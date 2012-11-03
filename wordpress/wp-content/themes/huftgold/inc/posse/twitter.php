@@ -32,6 +32,8 @@ function posse_twitter( $post_ID ) {
 	$shortlink = wp_get_shortlink();
 	$tweet_content = $post->post_content.' '.$shortlink;
 
+	
+
 	// ...run code once
 	if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
 
@@ -45,11 +47,11 @@ function posse_twitter( $post_ID ) {
 			'consumer_secret' => 'S1G6nDBMIYEFkfZVO9A2nVqLPCJO8coXJgJ6MzZ2xXM',
 			'user_token'      => '771746-sG8SHcbAW8UPFvZkAn6s424WRV19CVMHw46WB02I',
 			'user_secret'     => 'Gqiu2hnbyj4MkA7qD4ffeiKTODak8V0pp7fqvNEvp0',
-		));
+			));
 
 		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
-		'status' => $tweet_content
-		));
+			'status' => $tweet_content
+			));
 
 		if ( $code == 200) {
 			error_log('posse_twitter() made it past tmhOAuth, should be on Twitter now');

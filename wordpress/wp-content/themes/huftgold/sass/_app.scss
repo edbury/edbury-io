@@ -29,26 +29,26 @@ a {
 // Inline and block code styles
 code,
 pre {
-  padding: 0 3px 2px;
-  font-family: $monoFontFamily;
-  @include modular('font-size', ms(0), -2);
-  @include border-radius(3px);
+	padding: 0 3px 2px;
+	font-family: $monoFontFamily;
+	@include modular('font-size', ms(0), -2);
+	@include border-radius(3px);
 }
 
 // Inline code
 code {
-  padding: 0 4px;
-  @include modular('font-size', ms(0), -4);
-  color: #de124c;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
+	padding: 0 4px;
+	@include modular('font-size', ms(0), -4);
+	color: #de124c;
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
 }
 
 // Blocks of code
 pre {
-  display: block;
-  @include modular('padding', ms(0));
-  @include modular('margin', ms(0));
+	display: block;
+	@include modular('padding', ms(0));
+	@include modular('margin', ms(0));
   @include modular('font-size', ms(0), 0, .5); // 14px to 13px
   line-height: 1.6;
   word-break: break-all;
@@ -63,17 +63,17 @@ pre {
   // Account for some code outputs that place code tags in pre tags
   code {
   	@include modular('font-size', ms(0), 0, .7);
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-    border: 0;
+  	padding: 0;
+  	color: inherit;
+  	background-color: transparent;
+  	border: 0;
   }
 }
 
 // Enable scrollable blocks of code
 .pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
+	max-height: 340px;
+	overflow-y: scroll;
 }
 
 figcaption {
@@ -100,48 +100,48 @@ Wordpress Classes from _s / WPFill.me
 -----------------------------------------*/
 
 .alignleft {
-    float: left;
-    margin:0 15px 30px 0;
+	float: left;
+	margin:0 15px 30px 0;
 }
 .aligncenter {
-    display: block;
-    margin: 0 auto 30px auto;
+	display: block;
+	margin: 0 auto 30px auto;
 }
 .alignright {
-    float: right;
-    margin:0 0 30px 15px;
+	float: right;
+	margin:0 0 30px 15px;
 }
 .alignnone {
-    float: none;
-    display:block;
-    margin:0 0 30px 0;
+	float: none;
+	display:block;
+	margin:0 0 30px 0;
 }
 .size-full {
-    width:100%;
-    height:auto;
-    margin:0 0 30px 0;
+	width:100%;
+	height:auto;
+	margin:0 0 30px 0;
 }
 p .alignleft {
-    float: left;
-    margin:5px 15px 30px 0;
+	float: left;
+	margin:5px 15px 30px 0;
 }
 p .aligncenter {
-    display: block;
-    margin: 5px auto 30px auto;
+	display: block;
+	margin: 5px auto 30px auto;
 }
 p .alignright {
-    float: right;
-    margin:5px 0 30px 15px;
+	float: right;
+	margin:5px 0 30px 15px;
 }
 p .alignnone {
-    float: none;
-    display:block;
-    margin:5px 0 30px 0;
+	float: none;
+	display:block;
+	margin:5px 0 30px 0;
 }
 p .size-full {
-    width:100%;
-    height:auto;
-    margin:5px 0 30px 0;
+	width:100%;
+	height:auto;
+	margin:5px 0 30px 0;
 }
 
 /* Text meant only for screen readers */
@@ -260,9 +260,9 @@ p .size-full {
 ----------------------------------------------- */
 
 .format-status {
-	padding: 11% 0;
+	padding: 5.5% 0;
 	&:first-child {
-		padding: 23.5% 0 11% 0;
+		padding-top: 23.5%;
 	}
 	.entry-content {
 		@include modular('font-size', ms(0), 0, .85);
@@ -384,24 +384,24 @@ object {
  * @author Lea Verou
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
-	color: black;
-	text-shadow: 0 1px white;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-	
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
+ code[class*="language-"],
+ pre[class*="language-"] {
+ 	color: black;
+ 	text-shadow: 0 1px white;
+ 	direction: ltr;
+ 	text-align: left;
+ 	white-space: pre;
+ 	word-spacing: normal;
+ 	
+ 	-moz-tab-size: 4;
+ 	-o-tab-size: 4;
+ 	tab-size: 4;
+ 	
+ 	-webkit-hyphens: none;
+ 	-moz-hyphens: none;
+ 	-ms-hyphens: none;
+ 	hyphens: none;
+ }
 
 /* Code blocks */
 pre[class*="language-"] {
