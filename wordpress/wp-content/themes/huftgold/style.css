@@ -2502,10 +2502,10 @@ p .size-full {
 ----------------------------------------------- */
 /* line 262, sass/_app.scss */
 .format-status {
-  padding: 11% 0; }
+  padding: 5.5% 0; }
   /* line 264, sass/_app.scss */
   .format-status:first-child {
-    padding: 23.5% 0 11% 0; }
+    padding-top: 23.5%; }
   /* line 267, sass/_app.scss */
   .format-status .entry-content {
     font-size: 17px;
