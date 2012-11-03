@@ -223,6 +223,18 @@ add_action('wp_head', 'wpfme_IEhtml5_shim');
 add_filter('hum_shortlink_base', create_function('', 'return "http://ere.io/";'));
 
 /**
+ * Twitter username + hashtag filter
+ */
+
+function twitterize($status) {
+  $pattern = '/\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)((?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))*)/i';
+  $status = preg_replace($pattern, "<a href=\"\\0\">\\0</a>", $status );
+  $status = preg_replace("/[@]+([A-Za-z0-9-_]+)/", "<a href=\"http://twitter.com/\\1\">\\0</a>", $status );
+  $status = preg_replace("/[#]+([A-Za-z0-9-_]+)/", "<a href=\"http://twitter.com/search?q=%23\\1\">\\0</a>", $status );
+  return $status;
+}
+
+/**
  * POSSE 
  */
 
