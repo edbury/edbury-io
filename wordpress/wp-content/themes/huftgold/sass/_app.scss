@@ -214,7 +214,6 @@ p .size-full {
 }
 
 .entry-footer-meta {
-	text-transform: lowercase;
 	color: $io;
 	@include modular('font-size', ms(0), 0, .85);
 	a {
