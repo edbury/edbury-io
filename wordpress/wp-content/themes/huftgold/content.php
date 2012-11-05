@@ -45,7 +45,7 @@
 			</div>
 			<div class="row">
 				<div class="twelve columns text-right">
-					<a href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo wp_get_shortlink(); ?></a>
+					<a class="shortlink" href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo preg_replace('"http://"', '', wp_get_shortlink()); ?></a>
 				</div>
 			</div>
 		</div>

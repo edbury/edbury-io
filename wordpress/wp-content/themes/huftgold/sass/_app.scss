@@ -226,6 +226,16 @@ p .size-full {
 			opacity: 1;
 		}
 	}
+	.short-container {
+		@include modular('padding-top', ms(0), 0, .3);
+	}
+	.shortlink {
+		background-image: url(images/link.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		@include modular('padding-left', ms(0));
+		@include modular('margin-top', ms(0));
+	}
 	.taxonomies {
 		@include modular('margin-bottom', ms(0));
 	}

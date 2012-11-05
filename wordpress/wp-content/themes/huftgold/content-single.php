@@ -28,15 +28,17 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="six columns">
-						<a href="<?php echo get_permalink(); ?>" rel="bookmark">
-							<time class="entry-date" datetime="<?php get_the_date( 'c' ); ?>" pubdate>
-								<?php the_time('n.d.y H:i'); ?>
-							</time>
-						</a>
-					</div>
-					<div class="six columns text-right">
-						<a href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo wp_get_shortlink(); ?></a>
+					<div class="twelve columns text-right">
+						<div>
+							<a href="<?php echo get_permalink(); ?>" rel="bookmark">
+								<time class="entry-date" datetime="<?php get_the_date( 'c' ); ?>" pubdate>
+									<?php the_time('g:i a - j M y'); ?>
+								</time>
+							</a>
+						</div>
+						<div class="short-container">
+							<a class="shortlink" href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo preg_replace('"http://"', '', wp_get_shortlink()); ?></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -80,7 +82,7 @@
 				</div>
 				<div class="row">
 					<div class="twelve columns text-right">
-						<a href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo wp_get_shortlink(); ?></a>
+						<a class="shortlink" href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo preg_replace('"http://"', '', wp_get_shortlink()); ?></a>
 					</div>
 				</div>
 			</div>
