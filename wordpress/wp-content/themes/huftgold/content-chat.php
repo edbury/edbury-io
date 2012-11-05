@@ -44,8 +44,8 @@
 							</time>
 						</a>
 					</div>
-					<div>
-						<a href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo wp_get_shortlink(); ?></a>
+					<div class="short-container">
+						<a class="shortlink" href="<?php echo wp_get_shortlink(); ?>" title="Short URL for this page"><?php echo preg_replace('"http://"', '', wp_get_shortlink()); ?></a>
 					</div>
 				</div>
 			</div>
