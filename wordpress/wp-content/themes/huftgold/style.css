@@ -2449,8 +2449,8 @@ p .size-full {
 /* line 216, sass/_app.scss */
 .entry-footer-meta {
   color: #9a9994;
-  font-size: 17px;
-  font-size: 1.7rem; }
+  font-size: 14px;
+  font-size: 1.4rem; }
   /* line 219, sass/_app.scss */
   .entry-footer-meta a {
     color: #9a9994;
@@ -2511,14 +2511,46 @@ p .size-full {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
-  /* line 273, sass/_app.scss */
-  .format-status .entry-footer-meta {
-    font-size: 14px;
-    font-size: 1.4rem; }
+
+/* =Statuses
+----------------------------------------------- */
+/* line 280, sass/_app.scss */
+.format-chat .entry-content {
+  background: #e9e8e0;
+  padding: 20px;
+  padding: 2rem;
+  margin-right: 26.66667px;
+  margin-right: 2.66667rem;
+  margin-left: 26.66667px;
+  margin-left: 2.66667rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+/* line 287, sass/_app.scss */
+.format-chat .chat-text {
+  margin-left: 26.66667px;
+  margin-left: 2.66667rem; }
+  /* line 289, sass/_app.scss */
+  .format-chat .chat-text p {
+    margin: 0;
+    font-size: 18px;
+    font-size: 1.8rem; }
+/* line 294, sass/_app.scss */
+.format-chat .chat-author {
+  font-weight: bold; }
+/* line 297, sass/_app.scss */
+.format-chat .chat-new-speaker {
+  margin-top: 26.66667px;
+  margin-top: 2.66667rem; }
+  /* line 299, sass/_app.scss */
+  .format-chat .chat-new-speaker:first-child {
+    margin-top: 0; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 284, sass/_app.scss */
+/* line 312, sass/_app.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2526,7 +2558,7 @@ p .size-full {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */ }
 
-/* line 290, sass/_app.scss */
+/* line 318, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2534,7 +2566,7 @@ img[class*="wp-image-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-/* line 295, sass/_app.scss */
+/* line 323, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2542,7 +2574,7 @@ img.size-full {
   width: auto;
   /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
 
-/* line 300, sass/_app.scss */
+/* line 328, sass/_app.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2550,47 +2582,47 @@ img.size-full {
   margin-top: 0;
   padding: 0; }
 
-/* line 306, sass/_app.scss */
+/* line 334, sass/_app.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%; }
 
-/* line 312, sass/_app.scss */
+/* line 340, sass/_app.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em; }
 
-/* line 315, sass/_app.scss */
+/* line 343, sass/_app.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 320, sass/_app.scss */
+/* line 348, sass/_app.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 323, sass/_app.scss */
+/* line 351, sass/_app.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 326, sass/_app.scss */
+/* line 354, sass/_app.scss */
 #content .gallery {
   margin-bottom: 1.5em; }
 
-/* line 331, sass/_app.scss */
+/* line 359, sass/_app.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 336, sass/_app.scss */
+/* line 364, sass/_app.scss */
 #content .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 347, sass/_app.scss */
+/* line 375, sass/_app.scss */
 embed,
 iframe,
 object {
@@ -2598,17 +2630,17 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 355, sass/_app.scss */
+/* line 383, sass/_app.scss */
 #content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 359, sass/_app.scss */
+/* line 387, sass/_app.scss */
 #content .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 363, sass/_app.scss */
+/* line 391, sass/_app.scss */
 #content .nav-next {
   float: right;
   text-align: right;
@@ -2616,12 +2648,12 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 372, sass/_app.scss */
+/* line 400, sass/_app.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Search widget */
-/* line 377, sass/_app.scss */
+/* line 405, sass/_app.scss */
 #searchsubmit {
   display: none; }
 
@@ -2630,7 +2662,7 @@ object {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 388, sass/_app.scss */
+/* line 416, sass/_app.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -2648,51 +2680,51 @@ pre[class*="language-"] {
   hyphens: none; }
 
 /* Code blocks */
-/* line 407, sass/_app.scss */
+/* line 435, sass/_app.scss */
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto; }
 
-/* line 413, sass/_app.scss */
+/* line 441, sass/_app.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0; }
 
 /* Inline code */
-/* line 418, sass/_app.scss */
+/* line 446, sass/_app.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em; }
 
-/* line 426, sass/_app.scss */
+/* line 454, sass/_app.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: slategray; }
 
-/* line 430, sass/_app.scss */
+/* line 458, sass/_app.scss */
 .token.punctuation {
   color: #999; }
 
-/* line 434, sass/_app.scss */
+/* line 462, sass/_app.scss */
 .namespace {
   opacity: .7; }
 
-/* line 441, sass/_app.scss */
+/* line 469, sass/_app.scss */
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number {
   color: #905; }
 
-/* line 447, sass/_app.scss */
+/* line 475, sass/_app.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #690; }
 
-/* line 455, sass/_app.scss */
+/* line 483, sass/_app.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -2701,31 +2733,31 @@ pre[class*="language-"] {
   color: #a67f59;
   background: rgba(255, 255, 255, 0.5); }
 
-/* line 462, sass/_app.scss */
+/* line 490, sass/_app.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a; }
 
-/* line 468, sass/_app.scss */
+/* line 496, sass/_app.scss */
 .token.regex,
 .token.important {
   color: #e90; }
 
-/* line 472, sass/_app.scss */
+/* line 500, sass/_app.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 476, sass/_app.scss */
+/* line 504, sass/_app.scss */
 .token.entity {
   cursor: help; }
 
-/* line 479, sass/_app.scss */
+/* line 507, sass/_app.scss */
 pre[data-line] {
   position: relative;
   padding: 1em 0 1em 3em; }
 
-/* line 484, sass/_app.scss */
+/* line 512, sass/_app.scss */
 .line-highlight {
   position: absolute;
   left: 0;
@@ -2742,7 +2774,7 @@ pre[data-line] {
   line-height: inherit;
   white-space: pre; }
 
-/* line 504, sass/_app.scss */
+/* line 532, sass/_app.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   content: attr(data-start);
@@ -2760,7 +2792,7 @@ pre[data-line] {
   text-shadow: none;
   box-shadow: 0 1px white; }
 
-/* line 521, sass/_app.scss */
+/* line 549, sass/_app.scss */
 .line-highlight[data-end]:after {
   content: attr(data-end);
   top: auto;
@@ -2770,24 +2802,24 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 @media only screen and (max-width: 433px) {
-  /* line 532, sass/_app.scss */
+  /* line 560, sass/_app.scss */
   html {
     font-size: 45%; }
 
-  /* line 535, sass/_app.scss */
+  /* line 563, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
 @media only screen and (max-width: 521px) and (min-width: 434px) {
-  /* line 541, sass/_app.scss */
+  /* line 569, sass/_app.scss */
   html {
     font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 547, sass/_app.scss */
+  /* line 575, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
     position: static; }
 
-  /* line 551, sass/_app.scss */
+  /* line 579, sass/_app.scss */
   .post:first-child {
     padding: 11% 0 22% 0; } }

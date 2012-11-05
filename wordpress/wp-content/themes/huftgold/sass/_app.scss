@@ -215,7 +215,7 @@ p .size-full {
 
 .entry-footer-meta {
 	color: $io;
-	@include modular('font-size', ms(0), 0, .85);
+	@include modular('font-size', ms(0), 0, .7);
 	a {
 		color: $io;
 		@include transition(linear);
@@ -270,10 +270,38 @@ p .size-full {
 		//color: $io;
 		//font-style: italic;
 	}
-	.entry-footer-meta {
-		@include modular('font-size', ms(0), 0, .7);
+}
+
+
+/* =Statuses
+----------------------------------------------- */
+
+.format-chat {
+	.entry-content {
+		background: #e9e8e0;
+		@include modular('padding', ms(0));
+		@include modular('margin-right', ms(1));
+		@include modular('margin-left', ms(1));
+		@include border-radius(5px);
+	}
+	.chat-text {
+		@include modular('margin-left', ms(1));
+		p {
+			margin: 0;
+			@include modular('font-size', ms(0), 0, .9);
+		}
+	}
+	.chat-author {
+		font-weight: bold;
+	}
+	.chat-new-speaker {
+		@include modular('margin-top', ms(1));
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 }
+
 
 /* =Media
 ----------------------------------------------- */
@@ -392,11 +420,11 @@ object {
  	text-align: left;
  	white-space: pre;
  	word-spacing: normal;
- 	
+
  	-moz-tab-size: 4;
  	-o-tab-size: 4;
  	tab-size: 4;
- 	
+
  	-webkit-hyphens: none;
  	-moz-hyphens: none;
  	-ms-hyphens: none;
