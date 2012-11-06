@@ -22,11 +22,9 @@
 
 
 function posse_twitter( $post_ID ) {
-	error_log('Executing posse_twitter()');
 	$post = get_post( $post_ID );
 	// check post format if necessary
 	if ( get_post_format( $post->ID ) != 'status' ) return;
-	error_log('posse_twitter() made it past format check');
 
 	$post_id = $post->ID;
 	$shortlink = wp_get_shortlink();
@@ -37,7 +35,6 @@ function posse_twitter( $post_ID ) {
 	// ...run code once
 	if ( !get_post_meta( $post_id, 'tweeted', $single = true ) ) {
 
-		error_log('posse_twitter() not tweeted before');
 
 		// require the relevant libraries
 		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
@@ -49,15 +46,37 @@ function posse_twitter( $post_ID ) {
 			'user_secret'     => 'Gqiu2hnbyj4MkA7qD4ffeiKTODak8V0pp7fqvNEvp0',
 			));
 
-		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
-			'status' => $tweet_content
-			));
+
+		// Check to see if this is a tweet with image
+		if ( has_post_thumbnail( $post_id ) ) {
+
+			$image = str_replace( get_bloginfo('wpurl'), '/var/www/edburyio/wordpress', wp_get_attachment_url( get_post_thumbnail_id($post_id) ));
+
+			error_log($image);
+
+			$code = $tmhOAuth->request(
+			  'POST',
+			  'http://upload.twitter.com/1/statuses/update_with_media.json',
+			  array(
+			    'media[]'  => "@{$image};type=image/jpeg;filename={$image}",
+			    'status'   => 'Picture time',
+			  ),
+			  true, // use auth
+			  true  // multipart
+			);
+
+		} else {
+
+			$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
+				'status' => $tweet_content
+				));
+		}
 
 		if ( $code == 200) {
 			error_log('posse_twitter() made it past tmhOAuth, should be on Twitter now');
 			update_post_meta( $post_id, 'tweeted', true );
 		} else {
-			error_log($code);
+			error_log('posse_twitter() error' . $code);
 		}
 
 	}
