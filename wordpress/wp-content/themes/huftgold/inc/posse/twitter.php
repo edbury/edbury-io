@@ -59,7 +59,7 @@ function posse_twitter( $post_ID ) {
 			  'http://upload.twitter.com/1/statuses/update_with_media.json',
 			  array(
 			    'media[]'  => "@{$image};type=image/jpeg;filename={$image}",
-			    'status'   => 'Picture time',
+			    'status'   => $tweet_content
 			  ),
 			  true, // use auth
 			  true  // multipart
