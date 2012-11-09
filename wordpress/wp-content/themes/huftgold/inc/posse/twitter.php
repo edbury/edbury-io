@@ -28,7 +28,7 @@ function posse_twitter( $post_ID ) {
 
 	$post_id = $post->ID;
 	$shortlink = wp_get_shortlink();
-	$tweet_content = $post->post_content.' '.$shortlink;
+	$tweet_content = $post->post_content;
 
 	
 
