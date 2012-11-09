@@ -224,8 +224,10 @@ add_filter('hum_shortlink_base', create_function('', 'return "http://ere.io/";')
 
 function huftgold_hum_local_types( $types ) {
   $types[] = 'c';
+  $types[] = 'a';
   return $types;
 }
+
 add_filter('hum_local_types', 'huftgold_hum_local_types');
 
 function huftgold_hum_type_prefix( $prefix, $post_id ) {
@@ -233,6 +235,10 @@ function huftgold_hum_type_prefix( $prefix, $post_id ) {
 
   if ( get_post_format( $post->ID ) == 'chat' ) {
     $prefix = 'c';
+  }
+
+  if ( get_post_format( $post->ID ) == 'audio' ) {
+    $prefix = 'a';
   }
 
   return $prefix;
@@ -250,6 +256,17 @@ function twitterize($status) {
   $status = preg_replace("/[@]+([A-Za-z0-9-_]+)/", "<a href=\"http://twitter.com/\\1\">\\0</a>", $status );
   $status = preg_replace("/[#]+([A-Za-z0-9-_]+)/", "<a href=\"http://twitter.com/search?q=%23\\1\">\\0</a>", $status );
   return $status;
+}
+
+/**
+ * Format: Audio
+ * Grab source url from first line of post.
+ */
+
+function audio_yoink( $content ) {
+	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', $content, $matches ) )
+        return false;
+    return esc_url_raw( $matches[1] );
 }
 
 /**
@@ -399,4 +416,5 @@ function my_format_chat_row_id( $chat_author ) {
  * POSSE 
  */
 
-require( get_template_directory() . '/inc/posse/twitter.php' );
+//require( get_template_directory() . '/inc/posse/twitter.php' );
+require( get_template_directory() . '/inc/posse/tumblr.php' );
