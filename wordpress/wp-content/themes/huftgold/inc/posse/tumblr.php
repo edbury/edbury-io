@@ -16,7 +16,15 @@ function posse_tumblr( $post_ID ) {
 	$shortlink = wp_get_shortlink();
 	$text_content = $post->post_content . '<div class="shortlink"><a href="' . $shortlink . '" rel="bookmark">' . $shortlink . '</a></div>';
 	$text_content = wpautop($text_content);
-
+	$tags = get_the_tags( $post_id );
+	if ($tags) {
+	  foreach($tags as $tag) {
+	    $tag_array[] = $tag->name ; 
+	  }
+	  $tag_string = implode(',', $tag_array);
+	} else {
+		$tag_string = '';
+	}
 
 // ...run code once
 	if ( !get_post_meta( $post_id, 'tumbled', $single = true ) ) {
@@ -29,6 +37,7 @@ function posse_tumblr( $post_ID ) {
 
 			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
 				'type' => 'audio', 
+				'tags' => $tag_string,
 				'caption' => $text_content,
 				'external_url' => $audio_url
 				)
@@ -38,6 +47,7 @@ function posse_tumblr( $post_ID ) {
 
 			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
 				'type' => 'text', 
+				'tags' => $tag_string,
 				'body' => $text_content,
 				'title' => $post->post_title
 				)
