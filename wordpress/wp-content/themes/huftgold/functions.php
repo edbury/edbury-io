@@ -416,5 +416,5 @@ function my_format_chat_row_id( $chat_author ) {
  * POSSE 
  */
 
-//require( get_template_directory() . '/inc/posse/twitter.php' );
+require( get_template_directory() . '/inc/posse/twitter.php' );
 require( get_template_directory() . '/inc/posse/tumblr.php' );
