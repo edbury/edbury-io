@@ -7,11 +7,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<header class="entry-header">
+		<h1 class="entry-title">
+			<a href="<?php echo link_yoink( get_the_content() ); ?>" title="<?php the_title; ?>"><?php the_title(); ?> <span class="arrow">&rarr;</span></a>
+		</h1>
+	</header><!-- .entry-header -->
 	<div class="entry-content">
-		<audio controls="controls" preload="auto">
-			<source src="<?php echo link_yoink( get_the_content() ); ?>" title="<?php the_title(); ?>" type="audio/mp3">
-			Your browser does not support the audio element.
-		</audio>
+
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 

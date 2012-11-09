@@ -2525,9 +2525,38 @@ p .size-full {
     font-size: 1.7rem;
     line-height: 1.6; }
 
-/* =Statuses
+/* =Links
 ----------------------------------------------- */
-/* line 290, sass/_app.scss */
+/* line 289, sass/_app.scss */
+.format-link .entry-title {
+  font-size: 30px;
+  font-size: 3rem; }
+  /* line 291, sass/_app.scss */
+  .format-link .entry-title .arrow {
+    color: #9a9994;
+    -webkit-transition: linear;
+    -moz-transition: linear;
+    -o-transition: linear;
+    transition: linear;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+    -o-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    opacity: .6; }
+  /* line 298, sass/_app.scss */
+  .format-link .entry-title:hover .arrow {
+    opacity: 1; }
+/* line 303, sass/_app.scss */
+.format-link .entry-content a:first-child {
+  display: none; }
+
+/* =Chats
+----------------------------------------------- */
+/* line 313, sass/_app.scss */
 .format-chat .entry-content {
   background: #e9e8e0;
   padding: 20px;
@@ -2541,29 +2570,29 @@ p .size-full {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-/* line 297, sass/_app.scss */
+/* line 320, sass/_app.scss */
 .format-chat .chat-text {
   margin-left: 26.66667px;
   margin-left: 2.66667rem; }
-  /* line 299, sass/_app.scss */
+  /* line 322, sass/_app.scss */
   .format-chat .chat-text p {
     margin: 0;
     font-size: 18px;
     font-size: 1.8rem; }
-/* line 304, sass/_app.scss */
+/* line 327, sass/_app.scss */
 .format-chat .chat-author {
   font-weight: bold; }
-/* line 307, sass/_app.scss */
+/* line 330, sass/_app.scss */
 .format-chat .chat-new-speaker {
   margin-top: 26.66667px;
   margin-top: 2.66667rem; }
-  /* line 309, sass/_app.scss */
+  /* line 332, sass/_app.scss */
   .format-chat .chat-new-speaker:first-child {
     margin-top: 0; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 322, sass/_app.scss */
+/* line 345, sass/_app.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2571,7 +2600,7 @@ p .size-full {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */ }
 
-/* line 328, sass/_app.scss */
+/* line 351, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2579,7 +2608,7 @@ img[class*="wp-image-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
 
-/* line 333, sass/_app.scss */
+/* line 356, sass/_app.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2587,7 +2616,7 @@ img.size-full {
   width: auto;
   /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
 
-/* line 338, sass/_app.scss */
+/* line 361, sass/_app.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2595,47 +2624,47 @@ img.size-full {
   margin-top: 0;
   padding: 0; }
 
-/* line 344, sass/_app.scss */
+/* line 367, sass/_app.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%; }
 
-/* line 350, sass/_app.scss */
+/* line 373, sass/_app.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em; }
 
-/* line 353, sass/_app.scss */
+/* line 376, sass/_app.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 358, sass/_app.scss */
+/* line 381, sass/_app.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 361, sass/_app.scss */
+/* line 384, sass/_app.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0; }
 
-/* line 364, sass/_app.scss */
+/* line 387, sass/_app.scss */
 #content .gallery {
   margin-bottom: 1.5em; }
 
-/* line 369, sass/_app.scss */
+/* line 392, sass/_app.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%; }
 
-/* line 374, sass/_app.scss */
+/* line 397, sass/_app.scss */
 #content .gallery dd {
   margin: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 385, sass/_app.scss */
+/* line 408, sass/_app.scss */
 embed,
 iframe,
 object {
@@ -2643,17 +2672,17 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 393, sass/_app.scss */
+/* line 416, sass/_app.scss */
 #content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 397, sass/_app.scss */
+/* line 420, sass/_app.scss */
 #content .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 401, sass/_app.scss */
+/* line 424, sass/_app.scss */
 #content .nav-next {
   float: right;
   text-align: right;
@@ -2661,12 +2690,12 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 410, sass/_app.scss */
+/* line 433, sass/_app.scss */
 .widget {
   margin: 0 0 1.5em; }
 
 /* Search widget */
-/* line 415, sass/_app.scss */
+/* line 438, sass/_app.scss */
 #searchsubmit {
   display: none; }
 
@@ -2675,7 +2704,7 @@ object {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-/* line 426, sass/_app.scss */
+/* line 449, sass/_app.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -2693,51 +2722,51 @@ pre[class*="language-"] {
   hyphens: none; }
 
 /* Code blocks */
-/* line 445, sass/_app.scss */
+/* line 468, sass/_app.scss */
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto; }
 
-/* line 451, sass/_app.scss */
+/* line 474, sass/_app.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0; }
 
 /* Inline code */
-/* line 456, sass/_app.scss */
+/* line 479, sass/_app.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em; }
 
-/* line 464, sass/_app.scss */
+/* line 487, sass/_app.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: slategray; }
 
-/* line 468, sass/_app.scss */
+/* line 491, sass/_app.scss */
 .token.punctuation {
   color: #999; }
 
-/* line 472, sass/_app.scss */
+/* line 495, sass/_app.scss */
 .namespace {
   opacity: .7; }
 
-/* line 479, sass/_app.scss */
+/* line 502, sass/_app.scss */
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number {
   color: #905; }
 
-/* line 485, sass/_app.scss */
+/* line 508, sass/_app.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #690; }
 
-/* line 493, sass/_app.scss */
+/* line 516, sass/_app.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -2746,31 +2775,31 @@ pre[class*="language-"] {
   color: #a67f59;
   background: rgba(255, 255, 255, 0.5); }
 
-/* line 500, sass/_app.scss */
+/* line 523, sass/_app.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a; }
 
-/* line 506, sass/_app.scss */
+/* line 529, sass/_app.scss */
 .token.regex,
 .token.important {
   color: #e90; }
 
-/* line 510, sass/_app.scss */
+/* line 533, sass/_app.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 514, sass/_app.scss */
+/* line 537, sass/_app.scss */
 .token.entity {
   cursor: help; }
 
-/* line 517, sass/_app.scss */
+/* line 540, sass/_app.scss */
 pre[data-line] {
   position: relative;
   padding: 1em 0 1em 3em; }
 
-/* line 522, sass/_app.scss */
+/* line 545, sass/_app.scss */
 .line-highlight {
   position: absolute;
   left: 0;
@@ -2787,7 +2816,7 @@ pre[data-line] {
   line-height: inherit;
   white-space: pre; }
 
-/* line 542, sass/_app.scss */
+/* line 565, sass/_app.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   content: attr(data-start);
@@ -2805,7 +2834,7 @@ pre[data-line] {
   text-shadow: none;
   box-shadow: 0 1px white; }
 
-/* line 559, sass/_app.scss */
+/* line 582, sass/_app.scss */
 .line-highlight[data-end]:after {
   content: attr(data-end);
   top: auto;
@@ -2815,24 +2844,24 @@ pre[data-line] {
 Responsive Adjustments
 -----------------------------------------*/
 @media only screen and (max-width: 433px) {
-  /* line 570, sass/_app.scss */
+  /* line 593, sass/_app.scss */
   html {
     font-size: 45%; }
 
-  /* line 573, sass/_app.scss */
+  /* line 596, sass/_app.scss */
   .brand {
     font-size: 26.66667px;
     font-size: 2.66667rem; } }
 @media only screen and (max-width: 521px) and (min-width: 434px) {
-  /* line 579, sass/_app.scss */
+  /* line 602, sass/_app.scss */
   html {
     font-size: 50%; } }
 @media only screen and (max-width: 767px) {
-  /* line 585, sass/_app.scss */
+  /* line 608, sass/_app.scss */
   .sidebar {
     margin: 16px 0;
     position: static; }
 
-  /* line 589, sass/_app.scss */
+  /* line 612, sass/_app.scss */
   .post:first-child {
     padding: 11% 0 22% 0; } }

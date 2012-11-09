@@ -282,8 +282,31 @@ p .size-full {
 	}
 }
 
+/* =Links
+----------------------------------------------- */
 
-/* =Statuses
+.format-link {
+	.entry-title {
+		@include modular('font-size', ms(2));
+		.arrow {
+			color: $io;
+			@include transition(linear);
+			@include transition-property(opacity);
+			@include transition-duration(.25s);
+			opacity: .6;
+		}
+		&:hover .arrow {
+			opacity: 1;
+		}
+	}
+	.entry-content {
+		a:first-child {
+			display: none;
+		}
+	}
+}
+
+/* =Chats
 ----------------------------------------------- */
 
 .format-chat {

@@ -259,15 +259,16 @@ function twitterize($status) {
 }
 
 /**
- * Format: Audio
+ * Format: Audio & Link
  * Grab source url from first line of post.
  */
 
-function audio_yoink( $content ) {
+function link_yoink( $content ) {
 	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', $content, $matches ) )
         return false;
     return esc_url_raw( $matches[1] );
 }
+
 
 /**
  * Format: Chat
