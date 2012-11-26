@@ -2,13 +2,18 @@
 /*
  Plugin Name: Hum
  Plugin URI: http://github.com/willnorris/wordpress-hum
- Description: Whistle inspired URL shortener for WordPress
+ Description: Personal URL shortener for WordPress
  Author: Will Norris
  Author URI: http://willnorris.com/
- Version: 1.0
- License: Dual GPL (http://www.fsf.org/licensing/licenses/info/GPLv2.html) and Modified BSD (http://www.fsf.org/licensing/licenses/index_html#ModifiedBSD)
+ Version: 1.1
+ License: MIT (http://opensource.org/licenses/MIT)
  Text Domain: hum
  */
+
+
+// if you have hum installed, then you probably actually care about short
+// links, so we'll add it to the admin menu bar.
+add_action('admin_bar_menu', 'wp_admin_bar_shortlink_menu', 90);
 
 
 /**
@@ -32,6 +37,14 @@ function hum_parse_request( $wp ) {
     list($type, $id) = explode('/', $wp->query_vars['hum'], 2);
     do_action("hum_request_{$type}", $id);
     do_action('hum_request', $type, $id);
+
+    // hum hasn't handled the request yet, so try again but strip common
+    // punctuation that might appear after a URL in written text: . , )
+    $clean_id = preg_replace('/[\.,\)]+$/', '', $id);
+    if ($id != $clean_id) {
+      do_action("hum_request_{$type}", $clean_id);
+      do_action('hum_request', $type, $clean_id);
+    }
 
     // hum didn't handle request, so issue 404.
     // manually setting query vars like this feels very fragile, but
@@ -154,14 +167,24 @@ register_deactivation_hook(__FILE__, 'hum_flush_rewrite_rules');
  * @return string
  */
 function hum_shortlink_base() {
-  if ( defined('HUM_SHORTLINK_BASE') ) {
-    $base = HUM_SHORTLINK_BASE;
-  } else {
+  $base = get_option('hum_shortlink_base');
+  if ( empty( $base ) ) {
     $base = home_url();
   }
-
   return apply_filters( 'hum_shortlink_base', $base );
 }
+
+
+/**
+ * Allow the constant named 'HUM_SHORTLINK_BASE' to override the base URL for shortlinks.
+ */
+function _config_hum_shortlink_base( $url = '' ) {
+  if ( defined( 'HUM_SHORTLINK_BASE') ) {
+    return untrailingslashit( HUM_SHORTLINK_BASE );
+  }
+  return $url;
+}
+add_filter('pre_option_hum_shortlink_base', '_config_hum_shortlink_base');
 
 
 /**
@@ -177,7 +200,7 @@ function hum_get_shortlink($link, $id, $context, $allow_slugs) {
   $post_id = 0;
   if ( 'query' == $context ) {
     if ( is_front_page() ) {
-      $link = hum_shortlink_base();
+      $link = trailingslashit( hum_shortlink_base() );
     } elseif ( is_singular() ) {
       $post_id = get_queried_object_id();
     }
@@ -218,6 +241,46 @@ function hum_type_prefix( $post ) {
   }
 
   return apply_filters('hum_type_prefix', $prefix, $post);
+}
+
+
+// Admin Settings
+
+
+/**
+ * Register admin settings for Hum.
+ */
+function hum_admin_init() {
+  register_setting('general', 'hum_shortlink_base');
+}
+add_action('admin_init', 'hum_admin_init');
+
+
+/**
+ * Add admin settings fields for Hum.
+ */
+function hum_admin_menu() {
+  add_settings_field('hum_shortlink_base', __('Shortlink Base (URL)', 'hum'), 'hum_admin_shortlink_base', 'general');
+}
+add_action('admin_menu', 'hum_admin_menu');
+
+
+/**
+ * Admin UI for setting the shortlink base URL.
+ */
+function hum_admin_shortlink_base() {
+?>
+  <input name="hum_shortlink_base" type="text" id="hum_shortlink_base" value="<?php form_option('hum_shortlink_base'); ?>"<?php disabled( defined( 'HUM_SHORTLINK_BASE') ); ?> class="regular-text code<?php if ( defined( 'HUM_SHORTLINK_BASE') ) echo ' disabled' ?>" />
+  <p class="description">
+    If you have a custom domain you want to use for shortlinks, enter the address here.
+  </p>
+
+  <script>
+    // move adjacent to other URL properties
+    jQuery('input#hum_shortlink_base').parents('tr')
+      .insertAfter( jQuery('input#home').parents('tr') );
+  </script>
+<?php
 }
 
 
