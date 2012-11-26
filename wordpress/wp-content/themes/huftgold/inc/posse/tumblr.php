@@ -15,7 +15,13 @@ function posse_tumblr( $post_ID ) {
 	$post_id = $post->ID;
 	$shortlink = wp_get_shortlink();
 	$text_content = $post->post_content . '<div class="shortlink"><a href="' . $shortlink . '" rel="bookmark">' . $shortlink . '</a></div>';
+	if ( $post->post_title != '' ) {
+		$video_content = '<p class="caption">' . $post->post_title . '</p>' . $text_content;
+	} else {
+		$video_content = $text_content;
+	}
 	$text_content = wpautop($text_content);
+	$video_content = wpautop($video_content);
 	$safe_title = htmlspecialchars($post->post_title);
 	$tags = get_the_tags( $post_id );
 	if ($tags) {
@@ -54,6 +60,18 @@ function posse_tumblr( $post_ID ) {
 				'description' => $text_content,
 				'url' => $link_url,
 				'title' => $safe_title
+				)
+			);
+
+		} else if ( get_post_format( $post->ID ) == 'video' ) {
+
+			$embed = get_post_meta($post->ID, 'video', true);
+			
+			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
+				'type' => 'video', 
+				'tags' => $tag_string,
+				'caption' => $video_content,
+				'embed' => $embed,
 				)
 			);
 

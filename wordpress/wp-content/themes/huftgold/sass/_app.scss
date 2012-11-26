@@ -76,7 +76,7 @@ pre {
 	overflow-y: scroll;
 }
 
-figcaption {
+figcaption, .caption {
 	@include modular('font-size', ms(0), 0, .8);
 	color: $io;
 	text-align: center;
@@ -280,6 +280,14 @@ p .size-full {
 		//color: $io;
 		//font-style: italic;
 	}
+}
+
+/* =Video
+----------------------------------------------- */
+.video {
+	@include modular('margin-left', ms(1));
+	@include modular('margin-right', ms(1));
+	@include modular('margin-bottom', ms(1));
 }
 
 /* =Links
