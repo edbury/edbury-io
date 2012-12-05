@@ -290,6 +290,13 @@ p .size-full {
 	@include modular('margin-bottom', ms(1));
 }
 
+/* =Image
+----------------------------------------------- */
+
+.th {
+	@include modular('margin-bottom', ms(1));
+}
+
 /* =Links
 ----------------------------------------------- */
 
