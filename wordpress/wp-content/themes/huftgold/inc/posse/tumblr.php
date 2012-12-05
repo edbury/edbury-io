@@ -75,6 +75,22 @@ function posse_tumblr( $post_ID ) {
 				)
 			);
 
+		} else if ( get_post_format( $post->ID ) == 'image' ) {
+
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+			$url = $image['0'];
+			$fullsize = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full-size' );
+			$full_link = $fullsize['0'];
+			
+			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
+				'type' => 'photo', 
+				'tags' => $tag_string,
+				'caption' => $text_content,
+				'source' => $url,
+				'link' => $full_link
+				)
+			);
+
 		} else {
 
 			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
