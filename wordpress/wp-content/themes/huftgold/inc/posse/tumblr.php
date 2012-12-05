@@ -32,6 +32,14 @@ function posse_tumblr( $post_ID ) {
 	} else {
 		$tag_string = '';
 	}
+	if ( has_post_thumbnail($post_id) ) {
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+		$image_url = $image['0'];
+		$fullsize = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full-size' );
+		$full_image = $fullsize['0'];
+		$photo_content = '<p><a href="' . $full_image . '"><img src="' . $image_url . '" alt="' . $safe_title . '" title="' . $safe_title . '"></a></p>';
+		$photo_content = $photo_content . $text_content;
+	}
 
 // ...run code once
 	if ( !get_post_meta( $post_id, 'tumbled', $single = true ) ) {
@@ -75,6 +83,16 @@ function posse_tumblr( $post_ID ) {
 				)
 			);
 
+		} else if ( get_post_format( $post->ID ) == 'image' ) {
+
+			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
+				'type' => 'text', 
+				'tags' => $tag_string,
+				'body' => $photo_content,
+				'title' => $safe_title
+				)
+			);
+
 		} else {
 
 			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
@@ -90,7 +108,7 @@ function posse_tumblr( $post_ID ) {
 		if ( 200 == $tum_oauth->http_code | 201 == $tum_oauth->http_code ) {
 			update_post_meta( $post_id, 'tumbled', true );
 		} else {
-			error_log('posse_tumblr()) error' . $code);
+			error_log('posse_tumblr()) error' . $tum_oauth->http_code . print_r($tum_oauth, true));
 		}
 
 	}
