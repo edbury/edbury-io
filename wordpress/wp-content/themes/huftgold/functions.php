@@ -225,6 +225,7 @@ add_filter('hum_shortlink_base', create_function('', 'return "http://ere.io/";')
 function huftgold_hum_local_types( $types ) {
   $types[] = 'c';
   $types[] = 'a';
+  $types[] = 'p';
   return $types;
 }
 
@@ -239,6 +240,10 @@ function huftgold_hum_type_prefix( $prefix, $post_id ) {
 
   if ( get_post_format( $post->ID ) == 'audio' ) {
     $prefix = 'a';
+  }
+
+  if ( get_post_format( $post->ID ) == 'image' ) {
+    $prefix = 'p';
   }
 
   return $prefix;
