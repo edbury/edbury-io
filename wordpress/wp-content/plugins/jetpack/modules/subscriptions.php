@@ -8,26 +8,26 @@
 
 add_action( 'jetpack_modules_loaded', 'jetpack_subscriptions_load' );
  
+Jetpack_Sync::sync_options( __FILE__,
+	'home',
+	'blogname',
+	'siteurl',
+	'page_on_front',
+	'permalink_structure',
+	'category_base',
+	'rss_use_excerpt',
+	'subscription_options',
+	'stb_enabled',
+	'stc_enabled',
+	'tag_base'
+);
+
+Jetpack_Sync::sync_posts( __FILE__ );
+Jetpack_Sync::sync_comments( __FILE__ );
+
 function jetpack_subscriptions_load() {
 	Jetpack::enable_module_configurable( __FILE__ );
 	Jetpack::module_configuration_load( __FILE__, 'jetpack_subscriptions_configuration_load' );
-
-	Jetpack_Sync::sync_options( __FILE__,
-		'home',
-		'blogname',
-		'siteurl',
-		'page_on_front',
-		'permalink_structure',
-		'category_base',
-		'rss_use_excerpt',
-		'subscription_options',
-		'stb_enabled',
-		'stc_enabled',
-		'tag_base'
-	);
-
-	Jetpack_Sync::sync_posts( __FILE__ );
-	Jetpack_Sync::sync_comments( __FILE__ );
 }
 
 function jetpack_subscriptions_configuration_load() {
@@ -581,7 +581,7 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 			$email_address = $current_user->user_email;
 
 		// Display a subscribe form ?>
-		<a name="subscribe-blog"></a>
+		<a id="subscribe-blog"></a>
 		<form action="" method="post" accept-charset="utf-8" id="subscribe-blog">
 			<?php
 			if ( ! isset ( $_GET['subscribe'] ) ) {

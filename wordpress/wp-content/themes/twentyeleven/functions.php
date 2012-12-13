@@ -101,7 +101,7 @@ function twentyeleven_setup() {
 	if ( 'dark' == $theme_options['color_scheme'] )
 		$default_background_color = '1d1d1d';
 	else
-		$default_background_color = 'f1f1f1';
+		$default_background_color = 'e2e2e2';
 
 	// Add support for custom backgrounds.
 	add_theme_support( 'custom-background', array(
@@ -445,11 +445,11 @@ if ( ! function_exists( 'twentyeleven_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function twentyeleven_content_nav( $nav_id ) {
+function twentyeleven_content_nav( $html_id ) {
 	global $wp_query;
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<nav id="<?php echo $nav_id; ?>">
+		<nav id="<?php echo esc_attr( $html_id ); ?>">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyeleven' ) ); ?></div>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></div>

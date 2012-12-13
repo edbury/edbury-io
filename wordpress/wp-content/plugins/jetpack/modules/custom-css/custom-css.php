@@ -121,16 +121,49 @@ function safecss_revision_post_link( $post_link, $post_id, $context ) {
 add_filter( 'get_edit_post_link', 'safecss_revision_post_link', 10, 3 );
 
 /**
- * Get the safecss record
+ * Get the published custom CSS post.
  *
  * @return array
  */
 function get_safecss_post() {
-	$safecss_post = array();
-	$a = array_shift( get_posts( array( 'posts_per_page' => 1, 'post_type' => 'safecss', 'post_status' => 'publish', 'orderby' => 'date', 'order' => 'DESC' ) ) );
-	if ( $a )
-		$safecss_post = get_object_vars( $a ); // needed for php 5.3
-	return $safecss_post;
+	$custom_css_post_id = custom_css_post_id();
+
+	if ( $custom_css_post_id )
+		return get_post( $custom_css_post_id, ARRAY_A );
+
+	return array();
+}
+
+/**
+ * Get the post ID of the published custom CSS post.
+ *
+ * @return int|bool The post ID if it exists; false otherwise.
+ */
+function custom_css_post_id() {
+	$custom_css_post_id = wp_cache_get( 'custom_css_post_id' );
+
+	if ( false === $custom_css_post_id ) {
+		$custom_css_post = array_shift( get_posts( array(
+			'posts_per_page' => 1,
+			'post_type' => 'safecss',
+			'post_status' => 'publish',
+			'orderby' => 'date',
+			'order' => 'DESC'
+		) ) );
+
+		if ( $custom_css_post )
+			$custom_css_post_id = $custom_css_post->ID;
+		else
+			$custom_css_post_id = 0;
+
+		// Save post_id=0 to note that no safecss post exists.
+		wp_cache_set( 'custom_css_post_id', $custom_css_post_id );
+	}
+
+	if ( ! $custom_css_post_id )
+		return false;
+
+	return $custom_css_post_id;
 }
 
 /**
@@ -194,7 +227,9 @@ function save_revision( $css, $is_preview = false ) {
 		}
 
 		// Insert the CSS into wp_posts
-		return wp_insert_post( $post );
+		$post_id = wp_insert_post( $post );
+		wp_cache_set( 'custom_css_post_id', $post_id );
+		return $post_id;
 	}
 
 	// Update CSS in post array with new value passed to this function
@@ -218,7 +253,9 @@ function save_revision( $css, $is_preview = false ) {
 
 	// Do not update post if we are only saving a preview
 	if ( false === $is_preview ) {
-		return wp_update_post( $safecss_post );
+		$post_id = wp_update_post( $safecss_post );
+		wp_cache_set( 'custom_css_post_id', $post_id );
+		return $post_id;
 	}
 	else if ( !defined( 'DOING_MIGRATE' ) ) {
 		return _wp_put_post_revision( $safecss_post );
@@ -235,9 +272,9 @@ function safecss_skip_stylesheet() {
 			return (bool) ( get_option('safecss_preview_add') == 'no' || get_post_meta( $safecss_post['ID'], 'custom_css_add', true ) == 'no' );
 		}
 		else {
-			$safecss_post = get_safecss_post();
-			$safecss_post_id = isset( $safecss_post['ID'] ) ? $safecss_post['ID'] : null;
-			return (bool) ( get_option('safecss_add') == 'no' || get_post_meta( $safecss_post_id, 'custom_css_add', true ) == 'no' );
+			$custom_css_post_id = custom_css_post_id();
+
+			return (bool) ( get_option('safecss_add') == 'no' || ( $custom_css_post_id && get_post_meta( $custom_css_post_id, 'custom_css_add', true ) == 'no' ) );
 		}
 	}
 }
@@ -478,15 +515,22 @@ function safecss_style() {
 	if ( custom_css_is_customizer_preview() )
 		return;
 
+	$css    = '';
 	$option = safecss_is_preview() ? 'safecss_preview' : 'safecss';
 
 	if ( 'safecss' == $option ) {
 		if ( get_option( 'safecss_revision_migrated' ) ) {
 			$safecss_post = get_safecss_post();
-			$css = $safecss_post['post_content'];
+
+			if ( ! empty( $safecss_post['post_content'] ) ) {
+				$css = $safecss_post['post_content'];
+			}
 		} else {
 			$current_revision = get_current_revision();
-			$css = $current_revision['post_content'];
+
+			if ( ! empty( $current_revision['post_content'] ) ) {
+				$css = $current_revision['post_content'];
+			}
 		}
 
 		// Fix for un-migrated Custom CSS
@@ -500,7 +544,10 @@ function safecss_style() {
 
 	if ( 'safecss_preview' == $option ) {
 		$safecss_post = get_current_revision();
-		$css = $safecss_post['post_content'];
+
+		if ( !empty( $safecss_post['post_content'] ) ) {
+			$css = $safecss_post['post_content'];
+		}
 	}
 
 	$css = str_replace( array( '\\\00BB \\\0020', '\0BB \020', '0BB 020' ), '\00BB \0020', $css );
