@@ -8,7 +8,19 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php echo "<span>".twitterize(get_the_content())."</span>"; ?>
+		<?php if ( has_post_thumbnail() ) {
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+			$url = $image['0'];
+			$fullsize = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full-size' );
+			$full_link = $fullsize['0'];
+			?> 
+			<a href="<?php echo $full_link; ?>" class="th">
+				<img src="<?php echo $url; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+			</a>
+			<?php echo "<span>".twitterize(get_the_content())."</span>"; 
+		} else {
+			echo "<span>".twitterize(get_the_content())."</span>"; 
+		} ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
