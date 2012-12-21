@@ -83,7 +83,7 @@ function posse_tumblr( $post_ID ) {
 				)
 			);
 
-		} else if ( get_post_format( $post->ID ) == 'image' ) {
+		} else if ( ( get_post_format( $post->ID ) == 'image' ) || ( ( get_post_format( $post->ID ) == 'status' ) && ( has_post_thumbnail( $post->ID ) ) ) )  {
 
 			$tumble_this = $tum_oauth->post('http://api.tumblr.com/v2/blog/edbury.tumblr.com/post', array(
 				'type' => 'text', 
