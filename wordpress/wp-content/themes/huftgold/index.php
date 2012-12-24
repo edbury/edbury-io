@@ -14,7 +14,7 @@
 
 get_header(); ?>
 		<div class="row">
-			<div class="twelve columns">
+			<div class="ten columns offset-by-one end">
 				<div id="primary" class="content-area">
 					<div id="content" class="site-content" role="main">
 

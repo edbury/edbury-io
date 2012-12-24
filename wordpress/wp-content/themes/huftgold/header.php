@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 	<div class="row">
-		<div class="four columns">
+		<div class="three columns offset-by-one">
 			<div class="row">
 				<div class="ten columns end">
 					<div class="sidebar">
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 
-		<div class="eight columns">
+		<div class="seven columns end">
 
 			<div id="page" class="hfeed site">
 
