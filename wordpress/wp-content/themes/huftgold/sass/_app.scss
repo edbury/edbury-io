@@ -9,6 +9,10 @@
 			color: $io;
 		}
 	}
+	.widget p {
+		color: $io;
+		@include modular('font-size', ms(0), 0, .75);
+	}
 }
 
 .site {

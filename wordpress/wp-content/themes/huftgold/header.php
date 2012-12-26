@@ -30,6 +30,7 @@
 					    		<a class="brand" href="<?php echo home_url( '/' ); ?>"title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					    			edbury <span class="io">i/o</span>
 					    		</a>
+					    		<?php get_sidebar(); ?>
 						    </div>
 					    </header>
 					</div>
