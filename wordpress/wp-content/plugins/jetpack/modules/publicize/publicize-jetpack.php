@@ -219,7 +219,7 @@ class Publicize extends Publicize_Base {
 		if ( 'on' == $_REQUEST['global'] ) {
 			$id = $_REQUEST['connection'];
 
-			if ( !current_user_can( Publicize::GLOBAL_CAP ) )
+			if ( !current_user_can( $this->GLOBAL_CAP ) )
 				return;
 
 			Jetpack::load_xml_rpc_client();
@@ -363,6 +363,7 @@ class Publicize extends Publicize_Base {
 				echo $update_notice;
 			?>
 
+			<?php if ( !empty( $me['name'] ) ) : ?>
 			<p><?php printf(
 				esc_html__( 'Publicize to my %s:', 'jetpack' ),
 				'<strong>' . esc_html__( 'Facebook Wall', 'jetpack' ) . '</strong>'
@@ -376,6 +377,7 @@ class Publicize extends Publicize_Base {
 					</tr>
 				</tbody>
 			</table>
+			<?php endif; ?>
 
 			<?php if ( $pages ) : ?>
 
