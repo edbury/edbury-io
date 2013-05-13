@@ -1,0 +1,715 @@
+/*
+Theme Name: tummy rumblers
+Theme URI: http://underscores.me/
+Author: Edbury Enegren
+Author URI: http://edbury.io
+Description: Description
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ _s is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+@import "app";
+
+/*-----------------------------------------
+Typography
+-----------------------------------------*/
+
+* {
+	word-wrap: break-word;
+}
+
+a {
+	abbr {
+		color: $primary-color;
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+// Inline and block code styles
+code,
+pre {
+	padding: 0 3px 2px;
+	font-family: $code-font-family;
+	font-size: emCalc(22px);
+	border-radius: 3px;
+}
+
+// Inline code
+code {
+	padding: 0 4px;
+	color: #de124c;
+	font-size: emCalc(20px);
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+}
+
+// Blocks of code
+pre {
+	padding: 1em;
+	margin: 1em;
+    font-size: emCalc(18px);
+	display: block;
+	line-height: 1.6;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc; // fallback for IE7-8
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+
+  // Account for some code outputs that place code tags in pre tags
+	code {
+		font-size: emCalc(17px);
+		padding: 0;
+		color: inherit;
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+	max-height: 340px;
+	overflow-y: scroll;
+}
+
+figure {
+	padding-bottom: 2vmin;
+}
+
+figcaption, .caption {
+	font-size: emCalc(19px);
+	text-align: center;
+	font-style: italic;
+	padding-bottom: 1em;
+}
+
+blockquote ~ figcaption {
+	&:before {
+		content: '-';
+	}
+}
+
+sup, sub {
+}
+
+/*-----------------------------------------
+Wordpress Classes from _s / WPFill.me
+-----------------------------------------*/
+
+.alignleft {
+	float: left;
+	margin:0 15px 30px 0;
+}
+.aligncenter {
+	display: block;
+	margin: 0 auto 30px auto;
+}
+.alignright {
+	float: right;
+	margin:0 0 30px 15px;
+}
+.alignnone {
+	float: none;
+	display:block;
+	margin:0 0 30px 0;
+}
+.size-full {
+	width:100%;
+	height:auto;
+	margin:0 0 30px 0;
+}
+p .alignleft {
+	float: left;
+	margin:5px 15px 30px 0;
+}
+p .aligncenter {
+	display: block;
+	margin: 5px auto 30px auto;
+}
+p .alignright {
+	float: right;
+	margin:5px 0 30px 15px;
+}
+p .alignnone {
+	float: none;
+	display:block;
+	margin:5px 0 30px 0;
+}
+p .size-full {
+	width:100%;
+	height:auto;
+	margin:5px 0 30px 0;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.entry-title a {
+	color: $header-font-color;
+}
+.entry-meta {
+	clear: both;
+}
+.byline {
+	display: none;
+}
+/*.single .byline,
+.group-blog .byline {
+	display: inline;
+} */
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.post {
+	padding: 22% 0;
+	&:first-child {
+		padding-top: 11%;
+	}
+}
+.site-footer {
+	a {
+	}
+}
+
+/* =Posts
+----------------------------------------------- */
+
+article {
+	&.format-standard {
+		header {
+			.entry-title {
+				color: #222;
+				font-weight: bold;
+				font-size: 6.75vmin;
+			    font-family: $header-font-family;
+			    margin: 0 0 .5em 0;
+			    text-align: center;
+			    text-transform: uppercase;
+			    span {
+			    	font-weight: normal;
+			    	font-family: $body-font-family;
+		  			font-size: 5.75vmin;
+				    font-style: italic;
+				    text-transform: none;
+			    }
+			    .capitalize {
+			    	text-transform: capitalize;
+			    }
+			    .kern { 
+			    	margin: 0 4px 0 -10px;
+			    }
+			}
+			h2 {
+		    	border-top: 1px solid #222;
+		    	color: #222;
+		    	font-weight: bold;
+		    	font-family: $header-font-family;
+		    	font-size: 2vmin;
+		    	margin: 0 0 20px 0;
+		    	text-align: center;
+		    	text-transform: uppercase; 
+		    	span {
+		      		background: $body-bg;
+		      		padding: 0 20px;
+		      		position: relative;
+		      		top: -10px;
+		      	}
+		    }
+		}
+	    .entry-content > p {
+	    	font-size: 2.75vmin;
+	    	&.lead {
+	    		font-size: 3.5vmin;
+	    	}
+	    }
+	}
+	&.format-quote, &.format-video {
+		.entry-title {
+			display: none;
+		}
+		header {
+			.entry-meta {
+				display: none;
+			}
+		}
+		.entry-content > p {
+			font-size: .9em;
+		}
+		footer {
+			&.entry-meta {
+				visibility:hidden;
+				opacity:0;
+				transition: visibility 0s linear 0.2s,opacity 0.2s linear;
+				-webkit-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
+				-moz-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
+				-o-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
+			}
+		}
+		&:hover {
+			footer {
+				&.entry-meta {
+					visibility:visible;
+					opacity:1;
+					transition-delay: 0s;
+					-webkit-transition-delay: 0s;
+					-moz-transition-delay: 0s;
+					-o-transition-delay: 0s;
+				}
+			}
+		}
+	}
+	footer {
+		&.entry-meta {
+			font-weight: normal;
+			font-size: 2vmin;
+			font-family: $header-font-family;
+			text-align: right;
+			color: #bbb;
+			a {
+				color: #bbb;
+			}
+		}
+	}
+}
+
+.footnote {
+	list-style-type: none;
+	font-size: emCalc(19px);
+	padding: .5em;
+	a:first-child {
+		border-bottom: 0;
+	}
+	&:target {
+		border-radius: 5px;
+		background-color: #FEFEFD;
+		border: 1px solid $secondary-color;
+	}
+	a {
+		color: $body-font-color;
+	}
+}
+
+.entry-footer-meta {
+	font-size: emCalc(19px);
+	a {
+		@include transition(linear);
+		@include transition-property(opacity);
+		@include transition-duration(.25s);
+		opacity: .75;
+		color: $io;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.short-container {
+	}
+	.shortlink {
+		background-image: url(images/link.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+	}
+	.taxonomies {
+	}
+	.entry-meta-cats a {
+		&:before {
+			content: '/';
+		}
+		&:after {
+			content: '/';
+		}
+	}
+	.entry-meta-tags a {
+		&:last-child {
+			margin-right: 0;
+		}
+		&:before {
+			content: '#';
+		}
+	}
+}
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/* =Statuses
+----------------------------------------------- */
+
+.format-status {
+	padding: 5.5% 0;
+	&:first-child {
+		padding-top: 23.5%;
+	}
+	.entry-content {
+		line-height: 1.6;
+	}
+}
+
+/* =Video
+----------------------------------------------- */
+.video {
+	
+}
+
+/* =Image
+----------------------------------------------- */
+
+.th {
+}
+
+/* =Links
+----------------------------------------------- */
+
+.format-link {
+	.entry-title {
+		.arrow {
+			@include transition(linear);
+			@include transition-property(opacity);
+			@include transition-duration(.25s);
+			opacity: .6;
+		}
+		&:hover .arrow {
+			opacity: 1;
+		}
+	}
+	.entry-content {
+		a:first-child {
+			display: none;
+		}
+	}
+}
+
+/* =Chats
+----------------------------------------------- */
+
+.format-chat {
+	.entry-content {
+		background: #e9e8e0;
+		border-radius: 5px;
+	}
+	.chat-text {
+		p {
+			margin: 0;
+		}
+	}
+	.chat-author {
+		font-weight: bold;
+	}
+	.chat-new-speaker {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-bottom: 1.5em;
+}
+.wp-caption img {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+#content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+#content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+#content .gallery dd {
+	margin: 0;
+}
+#content .gallery-columns-4 .gallery-item {
+}
+#content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+#content .site-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+#content .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.top-bar {
+	background: transparent;
+	opacity:.6;
+	@include transition(linear);
+	@include transition-property(opacity);
+	@include transition-duration(.25s);
+	.io {
+		color: $io;
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
+
+/* =Footer
+----------------------------------------------- */
+.site-footer {
+	padding: 2em 0;
+	margin-top: 2em;
+	text-align: center;
+	font-size: emCalc(16px);
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+ 	color: black;
+ 	text-shadow: 0 1px white;
+ 	direction: ltr;
+ 	text-align: left;
+ 	white-space: pre;
+ 	word-spacing: normal;
+
+ 	-moz-tab-size: 4;
+ 	-o-tab-size: 4;
+ 	tab-size: 4;
+
+ 	-webkit-hyphens: none;
+ 	-moz-hyphens: none;
+ 	-ms-hyphens: none;
+ 	hyphens: none;
+ }
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	overflow: auto;	
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0,0%,100%,.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.token.important {
+	font-weight: bold;
+}
+
+.token.entity {
+	cursor: help;
+}
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; 
+
+	background: hsla(24, 20%, 50%,.08);
+	background: -moz-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: -webkit-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: -o-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	
+	pointer-events: none;
+	
+	line-height: inherit;
+	white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .4em;
+	left: .6em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsla(24, 20%, 50%,.4);
+	color: hsl(24, 20%, 95%);
+	font: bold 65%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	border-radius: 999px;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+}
