@@ -6613,7 +6613,7 @@ pre code {
 
 /* line 90, sass/style.scss */
 figure {
-  padding-bottom: 2vmin;
+  padding-bottom: 2vw;
 }
 
 /* line 94, sass/style.scss */
@@ -6758,7 +6758,7 @@ p .size-full {
 article.format-standard header .entry-title {
   color: #222;
   font-weight: bold;
-  font-size: 6.75vmin;
+  font-size: 3.75vw;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   margin: 0 0 .5em 0;
   text-align: center;
@@ -6768,7 +6768,7 @@ article.format-standard header .entry-title {
 article.format-standard header .entry-title span {
   font-weight: normal;
   font-family: "Gentium Book Basic", Georgia, "Times New Roman", Times, serif;
-  font-size: 5.75vmin;
+  font-size: 3.25vw;
   font-style: italic;
   text-transform: none;
 }
@@ -6786,7 +6786,7 @@ article.format-standard header h2 {
   color: #222;
   font-weight: bold;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 2vmin;
+  font-size: 2vw;
   margin: 0 0 20px 0;
   text-align: center;
   text-transform: uppercase;
@@ -6800,11 +6800,11 @@ article.format-standard header h2 span {
 }
 /* line 252, sass/style.scss */
 article.format-standard .entry-content > p {
-  font-size: 2.75vmin;
+  font-size: 1.7vw;
 }
 /* line 254, sass/style.scss */
 article.format-standard .entry-content > p.lead {
-  font-size: 3.5vmin;
+  font-size: 3vw;
 }
 /* line 260, sass/style.scss */
 article.format-quote .entry-title, article.format-video .entry-title {
@@ -6839,7 +6839,7 @@ article.format-quote:hover footer.entry-meta, article.format-video:hover footer.
 /* line 295, sass/style.scss */
 article footer.entry-meta {
   font-weight: normal;
-  font-size: 2vmin;
+  font-size: 2vw;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-align: right;
   color: #bbb;

@@ -24,6 +24,14 @@
 	</div>
 </footer><!-- #colophon -->
 
+<script>
+causeRepaintsOn = jQuery("h1, h2, h3, p");
+
+jQuery(window).resize(function() {
+  causeRepaintsOn.css("z-index", 1);
+});
+</script>
+
 <?php wp_footer(); ?>
 
 
