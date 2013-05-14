@@ -6786,7 +6786,7 @@ article.format-standard header h2 {
   color: #222;
   font-weight: bold;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 2vw;
+  font-size: 1.7vw;
   margin: 0 0 20px 0;
   text-align: center;
   text-transform: uppercase;
@@ -6796,7 +6796,7 @@ article.format-standard header h2 span {
   background: #fcfafc;
   padding: 0 20px;
   position: relative;
-  top: -10px;
+  top: -1.2vw;
 }
 /* line 252, sass/style.scss */
 article.format-standard .entry-content > p {
