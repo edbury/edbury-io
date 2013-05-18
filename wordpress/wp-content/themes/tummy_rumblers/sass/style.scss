@@ -209,6 +209,16 @@ p .size-full {
 	}
 }
 
+@media #{$smallest} {
+	.post {
+		@include rhythm(1, 1, 1, 1);
+		&:first-child {
+			margin-top: 10vw;
+			padding-top: 0;
+		}
+	}
+}
+
 @media #{$smaller} {
 	.post {
 		@include rhythm(2, 2, 2, 2);
@@ -235,6 +245,13 @@ p .size-full {
 
 /* =Posts
 ----------------------------------------------- */
+
+.single-post {
+	.post {
+		@include rhythm(1, 0, 1, 1);
+		margin-top: 10vw;
+	}
+}
 
 article {
 	&.format-standard {
