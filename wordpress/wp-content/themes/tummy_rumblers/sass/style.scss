@@ -113,6 +113,13 @@ h6 {
 	@include rhythm(1, 0, 0, 1, 22px);
 }
 
+hr {
+	border-style: solid;
+	border-color: $io;
+	@include rhythm(0, 0, 0, 1, 22px);
+	opacity: .5;
+}
+
 p {
 	@include rhythm(0, 0, 0, 1, 22px);
 }

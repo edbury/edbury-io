@@ -2461,6 +2461,17 @@ h6 {
 }
 
 /* line 116, sass/style.scss */
+hr {
+  border-style: solid;
+  border-color: #bbbbbb;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em;
+  opacity: .5;
+}
+
+/* line 123, sass/style.scss */
 p {
   margin-top: 0em;
   padding-top: 0em;
@@ -2471,64 +2482,64 @@ p {
 /*-----------------------------------------
 Wordpress Classes from _s / WPFill.me
 -----------------------------------------*/
-/* line 127, sass/style.scss */
+/* line 134, sass/style.scss */
 .alignleft {
   float: left;
   margin: 0 15px 30px 0;
 }
 
-/* line 131, sass/style.scss */
+/* line 138, sass/style.scss */
 .aligncenter {
   display: block;
   margin: 0 auto 30px auto;
 }
 
-/* line 135, sass/style.scss */
+/* line 142, sass/style.scss */
 .alignright {
   float: right;
   margin: 0 0 30px 15px;
 }
 
-/* line 139, sass/style.scss */
+/* line 146, sass/style.scss */
 .alignnone {
   float: none;
   display: block;
   margin: 0 0 30px 0;
 }
 
-/* line 144, sass/style.scss */
+/* line 151, sass/style.scss */
 .size-full {
   width: 100%;
   height: auto;
   margin: 0 0 30px 0;
 }
 
-/* line 149, sass/style.scss */
+/* line 156, sass/style.scss */
 p .alignleft {
   float: left;
   margin: 5px 15px 30px 0;
 }
 
-/* line 153, sass/style.scss */
+/* line 160, sass/style.scss */
 p .aligncenter {
   display: block;
   margin: 5px auto 30px auto;
 }
 
-/* line 157, sass/style.scss */
+/* line 164, sass/style.scss */
 p .alignright {
   float: right;
   margin: 5px 0 30px 15px;
 }
 
-/* line 161, sass/style.scss */
+/* line 168, sass/style.scss */
 p .alignnone {
   float: none;
   display: block;
   margin: 5px 0 30px 0;
 }
 
-/* line 166, sass/style.scss */
+/* line 173, sass/style.scss */
 p .size-full {
   width: 100%;
   height: auto;
@@ -2536,7 +2547,7 @@ p .size-full {
 }
 
 /* Text meant only for screen readers */
-/* line 173, sass/style.scss */
+/* line 180, sass/style.scss */
 .assistive-text, .screen-reader-text {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -2546,22 +2557,22 @@ p .size-full {
 
 /* =Content
 ----------------------------------------------- */
-/* line 185, sass/style.scss */
+/* line 192, sass/style.scss */
 .hentry {
   margin: 0 0 1.5em;
 }
 
-/* line 188, sass/style.scss */
+/* line 195, sass/style.scss */
 .entry-title a {
   color: #4e443c;
 }
 
-/* line 191, sass/style.scss */
+/* line 198, sass/style.scss */
 .entry-meta {
   clear: both;
 }
 
-/* line 194, sass/style.scss */
+/* line 201, sass/style.scss */
 .byline {
   display: none;
 }
@@ -2570,62 +2581,62 @@ p .size-full {
 .group-blog .byline {
 	display: inline;
 } */
-/* line 201, sass/style.scss */
+/* line 208, sass/style.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 205, sass/style.scss */
+/* line 212, sass/style.scss */
 .post {
   margin-top: 4.5em;
   padding-top: 4.5em;
   padding-bottom: 4.5em;
   margin-bottom: 4.5em;
 }
-/* line 207, sass/style.scss */
+/* line 214, sass/style.scss */
 .post:first-child {
   margin-top: 10vw;
   padding-top: 0;
 }
 
 @media only screen and (min-width: 0em) and (max-width: 30em) {
-  /* line 214, sass/style.scss */
+  /* line 221, sass/style.scss */
   .post {
     margin-top: 1.5em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     margin-bottom: 1.5em;
   }
-  /* line 216, sass/style.scss */
+  /* line 223, sass/style.scss */
   .post:first-child {
     margin-top: 10vw;
     padding-top: 0;
   }
 }
 @media only screen and (min-width: 30em) and (max-width: 34em) {
-  /* line 224, sass/style.scss */
+  /* line 231, sass/style.scss */
   .post {
     margin-top: 3em;
     padding-top: 3em;
     padding-bottom: 3em;
     margin-bottom: 3em;
   }
-  /* line 226, sass/style.scss */
+  /* line 233, sass/style.scss */
   .post:first-child {
     margin-top: 10vw;
     padding-top: 0;
   }
 }
 @media only screen and (min-width: 49em) {
-  /* line 234, sass/style.scss */
+  /* line 241, sass/style.scss */
   .post {
     margin-top: 7.5em;
     padding-top: 7.5em;
     padding-bottom: 7.5em;
     margin-bottom: 7.5em;
   }
-  /* line 236, sass/style.scss */
+  /* line 243, sass/style.scss */
   .post:first-child {
     margin-top: 10vw;
     padding-top: 0;
@@ -2633,7 +2644,7 @@ p .size-full {
 }
 /* =Posts
 ----------------------------------------------- */
-/* line 251, sass/style.scss */
+/* line 258, sass/style.scss */
 .single-post .post {
   margin-top: 1.5em;
   padding-top: 0em;
@@ -2642,7 +2653,7 @@ p .size-full {
   margin-top: 10vw;
 }
 
-/* line 260, sass/style.scss */
+/* line 267, sass/style.scss */
 article.format-standard header .entry-title {
   color: #222;
   font-weight: bold;
@@ -2650,32 +2661,32 @@ article.format-standard header .entry-title {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 266, sass/style.scss */
+/* line 273, sass/style.scss */
 article.format-standard header .entry-title span {
   font-weight: normal;
   font-family: "Gentium Book Basic", Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   text-transform: none;
 }
-/* line 272, sass/style.scss */
+/* line 279, sass/style.scss */
 article.format-standard header .entry-title .capitalize {
   text-transform: capitalize;
 }
-/* line 275, sass/style.scss */
+/* line 282, sass/style.scss */
 article.format-standard header .entry-title .kern {
   margin: 0 4px 0 -10px;
 }
-/* line 279, sass/style.scss */
+/* line 286, sass/style.scss */
 article.format-standard header h2 {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 200;
   text-align: center;
 }
-/* line 283, sass/style.scss */
+/* line 290, sass/style.scss */
 article.format-standard header h2 a {
   color: #bbbbbb;
 }
-/* line 290, sass/style.scss */
+/* line 297, sass/style.scss */
 article footer.entry-meta {
   font-size: 0.72727em;
   line-height: 2.0625em;
@@ -2684,31 +2695,31 @@ article footer.entry-meta {
   text-align: right;
   color: #bbbbbb;
 }
-/* line 296, sass/style.scss */
+/* line 303, sass/style.scss */
 article footer.entry-meta a {
   color: #bbbbbb;
 }
 
-/* line 303, sass/style.scss */
+/* line 310, sass/style.scss */
 .footnote {
   list-style-type: none;
 }
-/* line 305, sass/style.scss */
+/* line 312, sass/style.scss */
 .footnote a:first-child {
   border-bottom: 0;
 }
-/* line 308, sass/style.scss */
+/* line 315, sass/style.scss */
 .footnote:target {
   border-radius: 5px;
   background-color: #FEFEFD;
   border: 1px solid #d7aca7;
 }
-/* line 313, sass/style.scss */
+/* line 320, sass/style.scss */
 .footnote a {
   color: #4e443c;
 }
 
-/* line 319, sass/style.scss */
+/* line 326, sass/style.scss */
 .entry-footer-meta a {
   -webkit-transition: linear;
   -moz-transition: linear;
@@ -2725,36 +2736,36 @@ article footer.entry-meta a {
   opacity: .75;
   color: #bbbbbb;
 }
-/* line 325, sass/style.scss */
+/* line 332, sass/style.scss */
 .entry-footer-meta a:hover {
   opacity: 1;
 }
-/* line 331, sass/style.scss */
+/* line 338, sass/style.scss */
 .entry-footer-meta .shortlink {
   background-image: url(images/link.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 340, sass/style.scss */
+/* line 347, sass/style.scss */
 .entry-footer-meta .entry-meta-cats a:before {
   content: '/';
 }
-/* line 343, sass/style.scss */
+/* line 350, sass/style.scss */
 .entry-footer-meta .entry-meta-cats a:after {
   content: '/';
 }
-/* line 348, sass/style.scss */
+/* line 355, sass/style.scss */
 .entry-footer-meta .entry-meta-tags a:last-child {
   margin-right: 0;
 }
-/* line 351, sass/style.scss */
+/* line 358, sass/style.scss */
 .entry-footer-meta .entry-meta-tags a:before {
   content: '#';
 }
 
 /* =Asides
 ----------------------------------------------- */
-/* line 361, sass/style.scss */
+/* line 368, sass/style.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
@@ -2764,7 +2775,7 @@ article footer.entry-meta a {
 ----------------------------------------------- */
 /* =Links
 ----------------------------------------------- */
-/* line 380, sass/style.scss */
+/* line 387, sass/style.scss */
 .format-link .entry-title .arrow {
   -webkit-transition: linear;
   -moz-transition: linear;
@@ -2780,38 +2791,38 @@ article footer.entry-meta a {
   transition-duration: 0.25s;
   opacity: .6;
 }
-/* line 386, sass/style.scss */
+/* line 393, sass/style.scss */
 .format-link .entry-title:hover .arrow {
   opacity: 1;
 }
-/* line 391, sass/style.scss */
+/* line 398, sass/style.scss */
 .format-link .entry-content a:first-child {
   display: none;
 }
 
 /* =Chats
 ----------------------------------------------- */
-/* line 401, sass/style.scss */
+/* line 408, sass/style.scss */
 .format-chat .entry-content {
   background: #e9e8e0;
   border-radius: 5px;
 }
-/* line 406, sass/style.scss */
+/* line 413, sass/style.scss */
 .format-chat .chat-text p {
   margin: 0;
 }
-/* line 410, sass/style.scss */
+/* line 417, sass/style.scss */
 .format-chat .chat-author {
   font-weight: bold;
 }
-/* line 414, sass/style.scss */
+/* line 421, sass/style.scss */
 .format-chat .chat-new-speaker:first-child {
   margin-top: 0;
 }
 
 /* =Media
 ----------------------------------------------- */
-/* line 427, sass/style.scss */
+/* line 434, sass/style.scss */
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -2820,7 +2831,7 @@ article footer.entry-meta a {
   /* Fluid images for posts, comments, and widgets */
 }
 
-/* line 433, sass/style.scss */
+/* line 440, sass/style.scss */
 .site-header img,
 .entry-content img,
 img[class*="align"],
@@ -2829,7 +2840,7 @@ img[class*="wp-image-"] {
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-/* line 438, sass/style.scss */
+/* line 445, sass/style.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -2838,7 +2849,7 @@ img.size-full {
   /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
-/* line 443, sass/style.scss */
+/* line 450, sass/style.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -2847,55 +2858,55 @@ img.size-full {
   padding: 0;
 }
 
-/* line 449, sass/style.scss */
+/* line 456, sass/style.scss */
 .wp-caption {
   border: 1px solid #ccc;
   max-width: 100%;
 }
 
-/* line 455, sass/style.scss */
+/* line 462, sass/style.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em;
 }
 
-/* line 458, sass/style.scss */
+/* line 465, sass/style.scss */
 .wp-caption img {
   display: block;
   margin: 1.2% auto 0;
   max-width: 98%;
 }
 
-/* line 463, sass/style.scss */
+/* line 470, sass/style.scss */
 .wp-caption-text {
   text-align: center;
 }
 
-/* line 466, sass/style.scss */
+/* line 473, sass/style.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 469, sass/style.scss */
+/* line 476, sass/style.scss */
 #content .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 474, sass/style.scss */
+/* line 481, sass/style.scss */
 #content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%;
 }
 
-/* line 479, sass/style.scss */
+/* line 486, sass/style.scss */
 #content .gallery dd {
   margin: 0;
 }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 490, sass/style.scss */
+/* line 497, sass/style.scss */
 embed,
 iframe,
 object {
@@ -2905,13 +2916,13 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 @media only screen and (min-width: 49em) {
-  /* line 499, sass/style.scss */
+  /* line 506, sass/style.scss */
   #content .navigation-post {
     font-size: 0.75018em;
     line-height: 1.33301em;
   }
 }
-/* line 504, sass/style.scss */
+/* line 511, sass/style.scss */
 #content .navigation-post {
   margin-top: 0em;
   padding-top: 0em;
@@ -2919,12 +2930,12 @@ object {
   margin-bottom: 3.99903em;
 }
 
-/* line 508, sass/style.scss */
+/* line 515, sass/style.scss */
 #content .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 511, sass/style.scss */
+/* line 518, sass/style.scss */
 #content .nav-previous a {
   color: #bbbbbb;
   -webkit-transition: linear;
@@ -2941,19 +2952,19 @@ object {
   transition-duration: 0.25s;
   opacity: .5;
 }
-/* line 517, sass/style.scss */
+/* line 524, sass/style.scss */
 #content .nav-previous a:hover {
   opacity: 1;
   width: 100%;
 }
 
-/* line 523, sass/style.scss */
+/* line 530, sass/style.scss */
 #content .nav-next {
   text-align: right;
   float: right;
   width: 50%;
 }
-/* line 527, sass/style.scss */
+/* line 534, sass/style.scss */
 #content .nav-next a {
   color: #bbbbbb;
   -webkit-transition: linear;
@@ -2970,18 +2981,18 @@ object {
   transition-duration: 0.25s;
   opacity: .75;
 }
-/* line 533, sass/style.scss */
+/* line 540, sass/style.scss */
 #content .nav-next a:hover {
   opacity: 1;
 }
 
 /* =Header
 ----------------------------------------------- */
-/* line 542, sass/style.scss */
+/* line 549, sass/style.scss */
 .site-header .site-header {
   position: relative;
 }
-/* line 545, sass/style.scss */
+/* line 552, sass/style.scss */
 .site-header h1 {
   font-size: 0.75018em;
   line-height: 1.33301em;
@@ -2992,17 +3003,17 @@ object {
   margin-right: 2em;
   margin-left: 2em;
 }
-/* line 550, sass/style.scss */
+/* line 557, sass/style.scss */
 .site-header h1 a {
   color: #4e443c;
 }
-/* line 552, sass/style.scss */
+/* line 559, sass/style.scss */
 .site-header h1 a .io {
   color: #bbbbbb;
 }
 
 @media only screen and (min-width: 49em) {
-  /* line 561, sass/style.scss */
+  /* line 568, sass/style.scss */
   .site-header {
     position: fixed;
     right: 0;
@@ -3011,7 +3022,7 @@ object {
 }
 /* =Footer
 ----------------------------------------------- */
-/* line 570, sass/style.scss */
+/* line 577, sass/style.scss */
 .site-footer {
   text-align: center;
   font-size: 0.75018em;
@@ -3021,7 +3032,7 @@ object {
   padding-bottom: 1.99952em;
   margin-bottom: 1.99952em;
 }
-/* line 574, sass/style.scss */
+/* line 581, sass/style.scss */
 .site-footer a {
   color: #bbbbbb;
 }
@@ -3029,7 +3040,7 @@ object {
 /* =Widgets
 ----------------------------------------------- */
 /* Search widget */
-/* line 587, sass/style.scss */
+/* line 594, sass/style.scss */
 #searchsubmit {
   display: none;
 }
