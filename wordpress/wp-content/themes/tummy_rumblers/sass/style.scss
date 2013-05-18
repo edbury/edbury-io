@@ -202,9 +202,30 @@ p .size-full {
 	margin: 0 0 1.5em;
 }
 .post {
-	@include rhythm(4, 0, 0, 4);
+	@include rhythm(3, 3, 3, 3);
 	&:first-child {
 		margin-top: 10vw;
+		padding-top: 0;
+	}
+}
+
+@media #{$smaller} {
+	.post {
+		@include rhythm(2, 2, 2, 2);
+		&:first-child {
+			margin-top: 10vw;
+			padding-top: 0;
+		}
+	}
+}
+
+@media #{$small} {
+	.post {
+		@include rhythm(5, 5, 5, 5);
+		&:first-child {
+			margin-top: 10vw;
+			padding-top: 0;
+		}
 	}
 }
 .site-footer {
@@ -460,6 +481,10 @@ object {
 	#content .navigation-post {
 		@include adjust-font-size-to(16.504px, 2/3);
 	}
+}
+
+#content .navigation-post {
+	@include rhythm(0, 0, 2, 2, 16.504px);
 }
 
 #content .nav-previous {
