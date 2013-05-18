@@ -109,6 +109,7 @@ h5 {
 }
 
 h6 {
+	@include adjust-font-size-to(22px);
 	@include rhythm(1, 0, 0, 1, 22px);
 }
 
