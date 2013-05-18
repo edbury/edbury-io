@@ -22,19 +22,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header id="masthead" class="site-header fixed" role="banner">
-		<nav class="top-bar">
-		  <ul class="title-area">
-		    <!-- Title Area -->
-		    <li class="name site-branding">
+	<header id="masthead" class="site-header" role="banner">
 		      <h1 class="site-title">
 		      	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		      		edbury <span class="io">i/o</span>
+		      		e <span class="io">i/o</span>
 		      	</a>
 		      </h1>
-		    </li>
-		  </ul>
-		</nav>
 
 		<?php /*
 		<nav id="site-navigation" class="navigation-main" role="navigation">
@@ -42,11 +35,10 @@
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tummy_rumblers' ); ?>"><?php _e( 'Skip to content', 'tummy_rumblers' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-		*/ ?>
+		</nav><!-- #site-navigation -->  */ ?>
 	</header><!-- #masthead -->
 	<div class="row">
-		<div class="large-8 columns large-offset-4">
+		<div class="large-8 large-centered columns">
 			<div id="page" class="hfeed site">
 				<?php do_action( 'before' ); ?>
 				<div id="main" class="site-main">

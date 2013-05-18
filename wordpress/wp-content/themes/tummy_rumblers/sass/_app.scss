@@ -6,67 +6,10 @@
 // Comment out this import if you don't want to use normalize
 @import "normalize";
 
-// Comment out this import if you are customizing you imports below
-@import "foundation";
 
-// Adapt Modular Scale to other variables, make it rem-based with px fallback.  
-
-  @mixin modular($property, $size, $modifier: 0, $multiplier: 1) {
-    @if $property == 'font-size' {
-      font-size: ($size + $modifier) * $multiplier + px;
-      font-size: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding' {
-      padding: ($size + $modifier) * $multiplier + px;
-      padding: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding-sides' {
-      padding: 0 ($size + $modifier) * $multiplier + px;
-      padding: 0 (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding-top' {
-      padding-top: ($size + $modifier) * $multiplier + px;
-      padding-top: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding-bottom' {
-      padding-bottom: ($size + $modifier) * $multiplier + px;
-      padding-bottom: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding-left' {
-      padding-left: ($size + $modifier) * $multiplier + px;
-      padding-left: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'padding-right' {
-      padding-right: ($size + $modifier) * $multiplier + px;
-      padding-right: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'margin' {
-      margin: ($size + $modifier) * $multiplier + px;
-      margin: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'margin-bottom' {
-      margin-bottom: ($size + $modifier) * $multiplier + px;
-      margin-bottom: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'margin-top' {
-      margin-top: ($size + $modifier) * $multiplier + px;
-      margin-top: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'margin-left' {
-      margin-left: ($size + $modifier) * $multiplier + px;
-      margin-left: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'margin-right' {
-      margin-right: ($size + $modifier) * $multiplier + px;
-      margin-right: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'line-height' {
-      line-height: ($size + $modifier) * $multiplier + px;
-      line-height: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-    @if $property == 'height' {
-      height: ($size + $modifier) * $multiplier + px;
-      height: (($size + $modifier) / 10) * $multiplier + rem;
-    }
-  }
-
+@import
+  "foundation/components/global",
+  "foundation/components/grid",
+  "foundation/components/visibility",
+  "foundation/components/block-grid",
+  "foundation/components/clearing";

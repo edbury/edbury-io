@@ -26,8 +26,36 @@ and Blueprint http://www.blueprintcss.org/
 Typography
 -----------------------------------------*/
 
+@include establish-baseline();
+
 * {
 	word-wrap: break-word;
+}
+
+body {
+	@include adjust-font-size-to(20px);
+	padding: 0 4.5vw;
+}
+
+@media #{$smallest} {
+	body {
+		@include adjust-font-size-to(16px);
+		padding: 0;
+	}
+}
+
+@media #{$smaller} {
+	body {
+		@include adjust-font-size-to(18px);
+		padding: 0;
+	}
+}
+
+@media #{$small} {
+	body {
+		@include adjust-font-size-to(22px);
+		padding: 0;
+	}
 }
 
 a {
@@ -35,73 +63,57 @@ a {
 		color: $primary-color;
 		border-bottom: 1px solid #ddd;
 	}
-}
-
-// Inline and block code styles
-code,
-pre {
-	padding: 0 3px 2px;
-	font-family: $code-font-family;
-	font-size: emCalc(22px);
-	border-radius: 3px;
-}
-
-// Inline code
-code {
-	padding: 0 4px;
-	color: #de124c;
-	font-size: emCalc(20px);
-	background-color: #f7f7f9;
-	border: 1px solid #e1e1e8;
-}
-
-// Blocks of code
-pre {
-	padding: 1em;
-	margin: 1em;
-    font-size: emCalc(18px);
-	display: block;
-	line-height: 1.6;
-	word-break: break-all;
-	word-wrap: break-word;
-	white-space: pre;
-	white-space: pre-wrap;
-	background-color: #f5f5f5;
-	border: 1px solid #ccc; // fallback for IE7-8
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;
-
-  // Account for some code outputs that place code tags in pre tags
-	code {
-		font-size: emCalc(17px);
-		padding: 0;
-		color: inherit;
-		background-color: transparent;
-		border: 0;
-	}
-}
-
-// Enable scrollable blocks of code
-.pre-scrollable {
-	max-height: 340px;
-	overflow-y: scroll;
-}
-
-figure {
-	padding-bottom: 2vw;
-}
-
-figcaption, .caption {
-	font-size: emCalc(19px);
-	text-align: center;
-	font-style: italic;
-	padding-bottom: 1em;
+	text-decoration: none;
 }
 
 blockquote ~ figcaption {
 	&:before {
 		content: '-';
 	}
+}
+
+figure {
+	@include rhythm(0, 0, 1, 0);
+}
+
+figcaption, .caption {
+	@include adjust-font-size-to(21.328px);
+	@include rhythm(0, 0, 1, 0, 21.328px);
+	text-align: center;
+	font-style: italic;
+}
+
+h1 {
+	@include adjust-font-size-to(50.517px);
+	@include rhythm(1, 0, 0, 1, 50.517px);
+}
+
+h2 {
+	@include adjust-font-size-to(39.092px);
+	@include rhythm(1, 0, 0, 1, 39.092px);
+}
+
+h3 {
+	@include adjust-font-size-to(37.897px);
+	@include rhythm(1, 0, 0, 1, 37.897px);
+}
+
+h4 {
+	@include adjust-font-size-to(29.326px);
+	@include rhythm(1, 0, 0, 1, 29.326px);
+}
+
+h5 {
+	@include adjust-font-size-to(28.430px);
+	@include rhythm(1, 0, 0, 1, 28.430px);
+}
+
+h6 {
+	@include rhythm(1, 0, 0, 1, 22px);
+}
+
+p {
+	@include rhythm(0, 0, 0, 1, 22px);
 }
 
 sup, sub {
@@ -157,7 +169,7 @@ p .size-full {
 }
 
 /* Text meant only for screen readers */
-.assistive-text {
+.assistive-text, .screen-reader-text {
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -173,7 +185,7 @@ p .size-full {
 	margin: 0 0 1.5em;
 }
 .entry-title a {
-	color: $header-font-color;
+	color: $body-font-color;
 }
 .entry-meta {
 	clear: both;
@@ -185,18 +197,14 @@ p .size-full {
 .group-blog .byline {
 	display: inline;
 } */
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
 .post {
-	padding: 22% 0;
+	@include rhythm(4, 0, 0, 4);
 	&:first-child {
-		padding-top: 11%;
+		margin-top: 10vw;
 	}
 }
 .site-footer {
@@ -213,15 +221,12 @@ article {
 			.entry-title {
 				color: #222;
 				font-weight: bold;
-				font-size: 3.75vw;
-			    font-family: $header-font-family;
-			    margin: 0 0 .5em 0;
+			    font-family: $body-font-family;
 			    text-align: center;
 			    text-transform: uppercase;
 			    span {
 			    	font-weight: normal;
 			    	font-family: $body-font-family;
-		  			font-size: 3.25vw;
 				    font-style: italic;
 				    text-transform: none;
 			    }
@@ -233,73 +238,24 @@ article {
 			    }
 			}
 			h2 {
-		    	border-top: 1px solid #222;
-		    	color: #222;
-		    	font-weight: bold;
 		    	font-family: $header-font-family;
-		    	font-size: 1.7vw;
-		    	margin: 0 0 20px 0;
+		    	font-weight: 200;
 		    	text-align: center;
-		    	text-transform: uppercase; 
-		    	span {
-		      		background: $body-bg;
-		      		padding: 0 20px;
-		      		position: relative;
-		      		top: -1.2vw;
+		      	a {
+		      		color: $io;
 		      	}
 		    }
-		}
-	    .entry-content > p {
-	    	font-size: 1.7vw;
-	    	&.lead {
-	    		font-size: 3vw;
-	    	}
-	    }
-	}
-	&.format-quote, &.format-video {
-		.entry-title {
-			display: none;
-		}
-		header {
-			.entry-meta {
-				display: none;
-			}
-		}
-		.entry-content > p {
-			font-size: .9em;
-		}
-		footer {
-			&.entry-meta {
-				visibility:hidden;
-				opacity:0;
-				transition: visibility 0s linear 0.2s,opacity 0.2s linear;
-				-webkit-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
-				-moz-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
-				-o-transition: visibility 0s linear 0.2s,opacity 0.2s linear;
-			}
-		}
-		&:hover {
-			footer {
-				&.entry-meta {
-					visibility:visible;
-					opacity:1;
-					transition-delay: 0s;
-					-webkit-transition-delay: 0s;
-					-moz-transition-delay: 0s;
-					-o-transition-delay: 0s;
-				}
-			}
 		}
 	}
 	footer {
 		&.entry-meta {
+			@include adjust-font-size-to(16px);
 			font-weight: normal;
-			font-size: 2vw;
 			font-family: $header-font-family;
 			text-align: right;
-			color: #bbb;
+			color: $io;
 			a {
-				color: #bbb;
+				color: $io;
 			}
 		}
 	}
@@ -307,8 +263,6 @@ article {
 
 .footnote {
 	list-style-type: none;
-	font-size: emCalc(19px);
-	padding: .5em;
 	a:first-child {
 		border-bottom: 0;
 	}
@@ -323,7 +277,6 @@ article {
 }
 
 .entry-footer-meta {
-	font-size: emCalc(19px);
 	a {
 		@include transition(linear);
 		@include transition-property(opacity);
@@ -374,25 +327,10 @@ article {
 ----------------------------------------------- */
 
 .format-status {
-	padding: 5.5% 0;
 	&:first-child {
-		padding-top: 23.5%;
 	}
 	.entry-content {
-		line-height: 1.6;
 	}
-}
-
-/* =Video
------------------------------------------------ */
-.video {
-	
-}
-
-/* =Image
------------------------------------------------ */
-
-.th {
 }
 
 /* =Links
@@ -518,41 +456,81 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 
-#content .site-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+@media #{$small} {
+	#content .navigation-post {
+		@include adjust-font-size-to(16.504px, 2/3);
+	}
 }
+
 #content .nav-previous {
 	float: left;
 	width: 50%;
+	a {
+		color: $io;
+		@include transition(linear);
+		@include transition-property(opacity);
+		@include transition-duration(.25s);
+		opacity: .5;
+		&:hover {
+			opacity: 1;
+			width: 100%;
+		}
+	}
 }
 #content .nav-next {
-	float: right;
 	text-align: right;
+	float: right;
 	width: 50%;
+	a {
+		color: $io;
+		@include transition(linear);
+		@include transition-property(opacity);
+		@include transition-duration(.25s);
+		opacity: .75;
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
-.top-bar {
-	background: transparent;
-	opacity:.6;
-	@include transition(linear);
-	@include transition-property(opacity);
-	@include transition-duration(.25s);
-	.io {
-		color: $io;
+/* =Header
+----------------------------------------------- */
+.site-header {
+	.site-header {
+		position: relative;
 	}
-	&:hover {
-		opacity: 1;
+	h1 {
+		@include adjust-font-size-to(16.504px, 2/3);
+		@include rhythm(0, 1, 1, 0, 16.504px);
+		margin-right: 2em;
+		margin-left: 2em;
+		a {
+			color: $body-font-color;
+			.io {
+				color: $io;
+			}
+		}
+	}
+}
+
+
+@media #{$small} {
+	.site-header {
+		position: fixed;
+		right:0;
+		bottom:0;
 	}
 }
 
 /* =Footer
 ----------------------------------------------- */
 .site-footer {
-	padding: 2em 0;
-	margin-top: 2em;
 	text-align: center;
-	font-size: emCalc(16px);
+	@include adjust-font-size-to(16.504px);
+	@include rhythm(1, 1, 1, 1, 16.504px);
+	a {
+		color: $io;
+	}
 }
 
 
@@ -560,156 +538,9 @@ object {
 ----------------------------------------------- */
 
 .widget {
-	margin: 0 0 1.5em;
 }
 
 /* Search widget */
 #searchsubmit {
 	display: none;
-}
-
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-
- code[class*="language-"],
- pre[class*="language-"] {
- 	color: black;
- 	text-shadow: 0 1px white;
- 	direction: ltr;
- 	text-align: left;
- 	white-space: pre;
- 	word-spacing: normal;
-
- 	-moz-tab-size: 4;
- 	-o-tab-size: 4;
- 	tab-size: 4;
-
- 	-webkit-hyphens: none;
- 	-moz-hyphens: none;
- 	-ms-hyphens: none;
- 	hyphens: none;
- }
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	overflow: auto;	
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #f5f2f0;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: slategray;
-}
-
-.token.punctuation {
-	color: #999;
-}
-
-.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number {
-	color: #905;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string {
-	color: #690;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-	color: #a67f59;
-	background: hsla(0,0%,100%,.5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	color: #07a;
-}
-
-
-.token.regex,
-.token.important {
-	color: #e90;
-}
-
-.token.important {
-	font-weight: bold;
-}
-
-.token.entity {
-	cursor: help;
-}
-pre[data-line] {
-	position: relative;
-	padding: 1em 0 1em 3em;
-}
-
-.line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: inherit 0;
-	margin-top: 1em; 
-
-	background: hsla(24, 20%, 50%,.08);
-	background: -moz-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-	background: -webkit-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-	background: -o-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-	background: linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-	
-	pointer-events: none;
-	
-	line-height: inherit;
-	white-space: pre;
-}
-
-.line-highlight:before,
-.line-highlight[data-end]:after {
-	content: attr(data-start);
-	position: absolute;
-	top: .4em;
-	left: .6em;
-	min-width: 1em;
-	padding: 0 .5em;
-	background-color: hsla(24, 20%, 50%,.4);
-	color: hsl(24, 20%, 95%);
-	font: bold 65%/1.5 sans-serif;
-	text-align: center;
-	vertical-align: .3em;
-	border-radius: 999px;
-	text-shadow: none;
-	box-shadow: 0 1px white;
-}
-
-.line-highlight[data-end]:after {
-	content: attr(data-end);
-	top: auto;
-	bottom: .4em;
 }
