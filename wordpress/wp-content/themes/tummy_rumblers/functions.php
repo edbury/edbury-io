@@ -127,11 +127,12 @@ add_action( 'widgets_init', 'tummy_rumblers_widgets_init' );
  */
 function tummy_rumblers_scripts() {
 	//Fonts
-	wp_register_style('open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300');
-    wp_enqueue_style('open-sans');
 
-    wp_register_style('gentium-book-basic', 'http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic');
-    wp_enqueue_style('gentium-book-basic');
+    wp_register_style('merriweather', 'http://fonts.googleapis.com/css?family=Merriweather:400,700,900,300');
+    wp_enqueue_style('merriweather');
+
+    wp_register_style('lato', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic');
+    wp_enqueue_style('lato');
 
 	wp_enqueue_style( 'tummy rumblers-style', get_stylesheet_uri() );
 
