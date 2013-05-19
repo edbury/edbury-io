@@ -28,17 +28,9 @@
 		      		e <span class="io">i/o</span>
 		      	</a>
 		      </h1>
-
-		<?php /*
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'tummy_rumblers' ); ?></h1>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tummy_rumblers' ); ?>"><?php _e( 'Skip to content', 'tummy_rumblers' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->  */ ?>
 	</header><!-- #masthead -->
 	<div class="row">
-		<div class="large-8 large-centered columns">
+		<div class="large-12 columns">
 			<div id="page" class="hfeed site">
 				<?php do_action( 'before' ); ?>
 				<div id="main" class="site-main">

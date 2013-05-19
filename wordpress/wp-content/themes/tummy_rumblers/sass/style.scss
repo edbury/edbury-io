@@ -59,8 +59,8 @@ body {
 }
 
 a {
+	color: $body-font-color;
 	abbr {
-		color: $primary-color;
 		border-bottom: 1px solid #ddd;
 	}
 	text-decoration: none;
@@ -214,6 +214,20 @@ p .size-full {
 	&:first-child {
 		margin-top: 10vw;
 		padding-top: 0;
+	}
+	.entry-content {
+		a {
+			@include transition(linear);
+			@include transition-property(color);
+			@include transition-duration(.25s);
+			text-decoration: underline;
+			&:hover {
+				color: #000;
+			}
+			&:visited {
+				color: #000;
+			}
+		}
 	}
 }
 
@@ -574,15 +588,51 @@ object {
 
 /* =Footer
 ----------------------------------------------- */
+
 .site-footer {
-	text-align: center;
 	@include adjust-font-size-to(16.504px);
 	@include rhythm(1, 1, 1, 1, 16.504px);
-	a {
-		color: $io;
+	.contact {
+		a {
+			text-decoration: underline;
+		}
+	}
+	.site-info {
+		text-align: center;
+		a{
+			@include transition(linear);
+			@include transition-property(opacity);
+			@include transition-duration(.25s);
+			opacity: .75;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.navigation-main {
+		text-align: center;
+		a {
+			@include transition(linear);
+			@include transition-property(color);
+			@include transition-duration(.25s);
+			&:hover {
+				color: #000;
+			}
+		}
+		ul {
+			@include rhythm(0, 1, 1, 0, 16.504px);
+			list-style-type: none;
+			padding-left: 0;
+			li {
+				display: inline;
+				margin-right: 1em;
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 }
-
 
 /* =Widgets
 ----------------------------------------------- */

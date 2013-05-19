@@ -16,6 +16,9 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="row">
 		<div class="large-12 columns">
+			<nav id="site-navigation" class="navigation-main" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- #site-navigation -->
 			<div class="site-info">
 				<?php do_action( 'tummy_rumblers_credits' ); ?>
 				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'tummy_rumblers' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'tummy_rumblers' ), 'WordPress' ); ?></a>
