@@ -306,11 +306,18 @@ article {
 		      		color: $io;
 		      	}
 		    }
+		    @media #{$smallest} {
+				h2 {
+			    	font-weight: 300;
+			    }
+			}
 		}
 	}
 	footer {
+
 		&.entry-meta {
 			@include adjust-font-size-to(16px);
+			@include rhythm(0, 0, 1, 0, 16px);
 			font-weight: 100;
 			font-family: $header-font-family;
 			text-align: right;
@@ -318,6 +325,13 @@ article {
 			a {
 				color: $io;
 				text-decoration: none;
+			}
+		}
+		@media #{$smallest} {
+			&.entry-meta {
+				@include adjust-font-size-to(21.328px);
+				@include rhythm(0, 0, 1, 0, 21.328px);
+				font-weight: 300;
 			}
 		}
 	}
@@ -631,6 +645,28 @@ object {
 			}
 			li:last-child {
 				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media #{$smallest} {
+	.site-footer {
+		@include adjust-font-size-to(21.328px);
+		@include rhythm(1, 1, 1, 1, 21.328px);
+		.navigation-main {
+			ul {
+				@include rhythm(0, 1, 1, 0, 21.328px);
+				list-style-type: none;
+				padding-left: 0;
+				li {
+					@include rhythm(0, 1, 1, 0, 21.328px);
+					display: block;
+					margin-right: 0;
+				}
+				li:first-child {
+					@include rhythm(0, 0, 1, 0, 21.328px);
+				}
 			}
 		}
 	}
