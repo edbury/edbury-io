@@ -13,11 +13,15 @@
 			$fullsize = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full-size' );
 			$full_link = $fullsize['0'];
 			?> 
-			<a href="<?php echo $full_link; ?>" class="th">
-				<img src="<?php echo $url; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-			</a>
-			<?php echo "<span>".twitterize(get_the_content())."</span>"; 
-		} else {
+			<figure>
+				<a href="<?php echo $full_link; ?>" class="th">
+					<img src="<?php echo $url; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+				</a>
+				<figcaption>
+					<?php echo "<span>".twitterize(get_the_content())."</span>"; ?>
+				</figcaption>
+			</figure>
+		<?php } else {
 			echo "<span>".twitterize(get_the_content())."</span>"; 
 		} ?>
 	</div><!-- .entry-content -->

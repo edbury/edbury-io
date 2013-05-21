@@ -79,9 +79,10 @@ figure {
 
 figcaption, .caption {
 	@include adjust-font-size-to(21.328px);
-	@include rhythm(0, 0, 1, 0, 21.328px);
+	@include rhythm(0, 1, 1, 0, 21.328px);
 	text-align: center;
 	font-style: italic;
+	color: darken($io, 10%);
 }
 
 h1 {
@@ -119,6 +120,10 @@ hr {
 	border-color: $io;
 	@include rhythm(0, 0, 0, 1, 22px);
 	opacity: .5;
+}
+
+img {
+	border-radius: 4px;
 }
 
 p {
