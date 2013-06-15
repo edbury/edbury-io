@@ -56,7 +56,7 @@ function posse_twitter( $post_ID ) {
 
 			$code = $tmhOAuth->request(
 			  'POST',
-			  'http://upload.twitter.com/1/statuses/update_with_media.json',
+			  'http://upload.twitter.com/1.1/statuses/update_with_media.json',
 			  array(
 			    'media[]'  => "@{$image};type=image/jpeg;filename={$image}",
 			    'status'   => $tweet_content
@@ -67,7 +67,7 @@ function posse_twitter( $post_ID ) {
 
 		} else {
 
-			$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
+			$code = $tmhOAuth->request('POST', $tmhOAuth->url('1.1/statuses/update'), array(
 				'status' => $tweet_content
 				));
 		}
