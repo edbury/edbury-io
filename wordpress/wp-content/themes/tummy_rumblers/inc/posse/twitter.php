@@ -37,8 +37,8 @@ function posse_twitter( $post_ID ) {
 
 
 		// require the relevant libraries
-		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
-		require get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhUtilities.php';
+		include_once get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhOAuth.php';
+		include_once get_template_directory() .'/inc/posse/libraries/tmhOAuth/tmhUtilities.php';
 		$tmhOAuth = new tmhOAuth(array(
 			'consumer_key'    => 'SdRONQAbY4LeKAvsrK3A',
 			'consumer_secret' => 'S1G6nDBMIYEFkfZVO9A2nVqLPCJO8coXJgJ6MzZ2xXM',
