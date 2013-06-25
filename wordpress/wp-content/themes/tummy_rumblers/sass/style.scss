@@ -67,9 +67,15 @@ a {
 	text-decoration: none;
 }
 
+blockquote {
+	margin: 0 1.5vw;
+	padding: 0 1.5vw;
+	border-left: 2px solid $io;
+}
+
 blockquote ~ figcaption {
 	&:before {
-		content: '-';
+		//content: '-';
 	}
 }
 
@@ -79,9 +85,9 @@ figure {
 
 figcaption, .caption {
 	@include adjust-font-size-to(21.328px);
-	@include rhythm(0, 1, 1, 0, 21.328px);
+	@include rhythm(0, 0, 0, 1, 21.328px);
 	text-align: center;
-	font-style: italic;
+	//font-style: italic;
 	color: darken($io, 10%);
 }
 
@@ -419,6 +425,13 @@ article {
 
 .format-link {
 	.entry-title {
+		@include adjust-font-size-to(29.326px);
+		@include rhythm(1, 0, 0, 1, 29.326px);
+		a {
+			@include transition(linear);
+			@include transition-property(color);
+			@include transition-duration(.25s);
+		}
 		.arrow {
 			@include transition(linear);
 			@include transition-property(opacity);
@@ -427,6 +440,9 @@ article {
 		}
 		&:hover .arrow {
 			opacity: 1;
+		}
+		&:hover a {
+			color: #000;
 		}
 	}
 	.entry-content {
